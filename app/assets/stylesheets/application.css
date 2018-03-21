@@ -243,7 +243,7 @@ nav::after {
 }
 #contact-info{
 	text-align: center;
-	padding: 1em;
+	padding: 2.5em 1em 2em 1em;
 }
 #contact-info p{
 	line-height: 2em;
