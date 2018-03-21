@@ -13,3 +13,243 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+    padding:0;margin: 0;
+}
+
+.container{
+    padding: 1em;
+}
+.row,
+.column{
+    box-sizing: border-box;
+}
+.row{
+    margin-bottom: 1em;
+}
+.row:before, 
+.row:after{
+    content: "";
+    display: table;
+}
+.row:after{
+    clear: both;
+}
+[class*=column]{
+    position: relative;
+    float:left;
+}
+[class*=column] + [class*=column]{
+    margin-left: 1.6%;
+}
+.column-1{
+    width: 6.866666667%;
+}
+.column-2{
+    width: 15.3333333333%;
+}
+.column-3{
+    width: 23.8%;
+}
+.column-4{
+    width: 32.2666666667%;
+}
+.column-5{ 
+    width: 40.7333333333%;
+}
+.column-6{
+    width: 49.2%;
+}
+.column-7{
+    width: 57.6666666667%;
+}
+.column-8{
+    width: 66.1333333333%;
+}
+.column-9{
+    width: 74.6%;
+}
+.column-10{
+    width: 83.06666667%;
+}
+.column-11{
+    width: 91.5333333333%;
+}
+.column-12{
+    width:100%;
+}
+/*offset*/
+.column-offset-1{
+    margin-left: 8.466666667%;
+}
+.column-offset-2{
+    margin-left: 16.93333333%;
+}
+.column-offset-3{
+    margin-left: 25.4%;
+}
+.column-offset-4{
+    margin-left: 33.866666667%;
+}
+.column-offset-5{
+    margin-left: 42.333333333%;
+}
+.column-offset-6{
+    margin-left: 50.8%;
+}
+.column-offset-7{
+    margin-left: 59.266666667%;
+}
+.column-offset-8{
+    margin-left: 67.733333333%;
+}
+.column-offset-9{
+    margin-left: 76.2%;
+}
+.column-offset-10{
+    margin-left: 84.666666667%;
+}
+.column-offset-11{
+    margin-left: 93.133333333%;
+}
+
+@media only screen and (max-width: 550px){
+    .column-1,
+    .column-2,
+    .column-3,
+    .column-4,
+    .column-5,
+    .column-6,
+    .column-7,
+    .column-8,
+    .column-9,
+    .column-10,
+    .column-11,
+    .column-12 {
+        width: 100%;
+        float: none;
+    }
+
+    [class*=column]{
+      margin-left: 0;
+    }
+    [class*=column] + [class*=column]{
+    margin-left: 0;
+    }
+}
+/*end of my-grid*/
+p{
+	margin:0;
+	padding:0;
+}
+nav{
+	box-sizing: border-box;
+	padding:1em;
+}
+#logo-wrapper{
+	height: 50px;
+	width: 230px;
+	box-sizing: border-box;
+	float:left;
+}
+#logo-image{
+	height: 50px;
+	width: 90px;
+	background-color: red;
+	float: left;
+	background-image: url('http://jscpagrowth.com/yahoo_site_admin/assets/images/JSLogoyellow_2.194103958_logo.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#logo-text{
+	height: 50px;
+	width: 130px;
+	float: left;
+	font-size: 12px;
+	padding-left: 1em;
+	padding-top: 5px;
+	box-sizing: border-box;
+}
+nav::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#menu{
+	width: 20px;
+	float: right;
+	margin-top:15px;
+	cursor:pointer;
+}
+#menu div {
+	background-color: #004C80;
+	height: 3px;
+	width: 100%;
+	margin-bottom: 3px;
+}
+#desktop-navbar{
+	display:none;
+}
+#home-main-pic{
+	/* height: 20vh; */
+	width: 100%;
+	height: 30vw;
+}
+.object-fill_fill{
+	object-fit: fill;
+}
+
+.cover{
+	width:260px;
+	object-fit: cover;
+}
+#main-text{
+	text-align: center;
+	padding: 3em 3em;
+	line-height: 1.7em;
+	font-family:arial;
+	color: #665d5d;
+}
+#service-pic{
+	margin: 0 auto;
+	display: block;
+	height:100px;
+}
+.service-header, .service-description{
+	color: #717171;
+	text-align: center;
+}
+.service-description{
+	font-size: 12px;
+}
+#services{
+	background-color: #ECECEC;
+	padding: 5em 2em 0 2em;
+}
+#read-more-btn{
+	text-decoration: none;
+	background-color: #004C80;
+	color: white;
+	font-family: arial;
+	padding: 0.5em;
+	font-weight: bold;
+	display: block;
+	width: 6.2em;
+	margin: 5em auto 5em auto;
+}
+#services .column-4{
+	padding-bottom:4em;
+}
+#contact-info{
+	text-align: center;
+	padding: 1em;
+}
+#contact-info p{
+	line-height: 2em;
+	font-size: 12px;
+	margin-bottom: 1em;
+}
+#contact-info h3{
+	font-weight: normal;
+}

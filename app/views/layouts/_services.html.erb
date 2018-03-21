@@ -1,0 +1,34 @@
+<div id="services">
+	<div class="row">
+		<div class="column-4">
+			<img id="service-pic" src=<%=asset_path('pencil.png')%>>
+			<h3 class="service-header">Bookkeeping / Payroll Services</h3>
+			<p class="service-description">Let us help you so you can do what you do best &mdash; run your business.</p>
+		</div>
+		<div class="column-4">
+			<img id="service-pic" src=<%=asset_path('public-notary.png')%>>
+			<h3 class="service-header">Public Notary</h3>
+			<p class="service-description">Let us help you so you can do what you do best &mdash; run your business.</p>
+		</div>
+		<div class="column-4">
+			<img id="service-pic" src=<%=asset_path('money.png')%>>
+			<h3 class="service-header">General Business Accounting</h3>
+			<p class="service-description">Let us help you so you can do what you do best &mdash; run your business.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="column-4">
+			<img id="service-pic" src=<%=asset_path('tax.png')%>>
+			<h3 class="service-header">Tax Preparation Services</h3>
+			<p class="service-description">Let us help you so you can do what you do best &mdash; run your business.</p>
+		</div>
+		<div class="column-4">
+			<img id="service-pic" src=<%=asset_path('logistics.png')%>>
+			<h3 class="service-header">Business Logistics</h3>
+			<p class="service-description">Let us help you so you can do what you do best &mdash; run your business.</p>
+		</div>
+		<div class="column-4">
+			<%=link_to "READ MORE", services_path, :method => "get", id: "read-more-btn"%>
+		</div>
+	</div>
+</div>
