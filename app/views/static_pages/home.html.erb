@@ -1,22 +1,44 @@
 <div class="image">
-<img id="home-main-pic" class="object-fit_fill" src="http://jscpagrowth.com/yahoo_site_admin/assets/images/citycolor.13394333_std.jpg">
+    <img id="home-main-pic" class="object-fit_fill" src="http://jscpagrowth.com/yahoo_site_admin/assets/images/citycolor.13394333_std.jpg">
 </div>
 <content>
 	<p id="main-text">Welcome to Washington Sanchez &amp; Associates, LLC. We provide professional tax preparation services and accounting services at competitive and affordable rates. Our philosophy is to help the community and make your needs our needs.</p>
 	<%=render 'layouts/services'%>
 </content>
-
-<div class="row">
+<div class="row communication-row-wrapper">
+	<div class="column-6">
+		<div class="inner-wrapper first">
+			<div>
+				<h2>Have a question?</h2>
+				<p>We encourage you to ask away! Whether it's feedback or comments we are eager to hear from you.</p>
+				<%=link_to "SEND MESSAGE", contact_us_path, :method => "get", class: "btn"%>
+			</div>
+		</div>
+	</div>
+	<div class="column-6" >
+		<div class="inner-wrapper last">
+			<div>
+				<h2>Request an Appointment</h2>
+				<p>Please contact us anytime! We speak English, Spanish, and Portuguese. Call us today to make an appointment at</p>
+				<a class="btn" href="tel:9084696874">(908)-469-6874</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!--Map and contact info-->
+<div class="row map-contact-wrapper">
 	<div class="column-6">
 		<iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=79%20Dayton%20Street%2C%20Suite%201%2C%20Elizabeth%20NJ%2007202&key=<%=ENV["GOOGLE_MAP_API_KEY"]%>" allowfullscreen></iframe>
 	</div>
 	<div class="column-6">
 		<div id="contact-info">
-	<h3>Contact Us</h3>
-	<p><span>Address:</span>79 Dayton Street, Suite 1, Elizabeth NJ 07202</p>
-	<p><span>Tel:</span>(908)469-6874</p>
-	<p><span>Fax:</span>(908)248-9393</p>
-	<p><span>Email:</span>Javier@jscpagrowth.com</p>
+        	<h3>Contact Us</h3>
+        	<p><strong>Address:</strong>79 Dayton Street, Suite 1, Elizabeth NJ 07202</p>
+        	<p><strong>Tel:</strong>(908)469-6874</p>
+        	<p><strong>Fax:</strong>(908)248-9393</p>
+        	<p><strong>Email:</strong><a href="mailto:contact@jscpagrowth.com">contact@jscpagrowth.com</a></p>
+        </div>
+    </div>
 </div>
-	</div>
-</div> 
+
+	

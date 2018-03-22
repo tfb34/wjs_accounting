@@ -143,6 +143,9 @@ p{
 	margin:0;
 	padding:0;
 }
+a{
+	text-decoration: none;
+}
 nav{
 	box-sizing: border-box;
 	padding:1em;
@@ -228,7 +231,6 @@ nav::after {
 	padding: 5em 2em 0 2em;
 }
 #read-more-btn{
-	text-decoration: none;
 	background-color: #004C80;
 	color: white;
 	font-family: arial;
@@ -252,4 +254,54 @@ nav::after {
 }
 #contact-info h3{
 	font-weight: normal;
+	color: rgb(113,113,113);
+}
+.map-contact-wrapper{
+	background-color: #ECECEC;
+}
+.btn{
+	padding: 1em;
+	background-color: #004C80;
+	color: white;
+	display: block;
+	width: 10em;
+	margin: 2em auto;
+	/* font-size: 15px; */
+	font-weight: bold;
+	font-family: sans;
+}
+.communication-row-wrapper{
+	margin-top: 3em;margin-bottom: 6em;font-size:14px;/*desktop: margin-top,margin-bottom: 3em*/
+}
+.inner-wrapper{
+	width:100%;text-align: center
+}
+.inner-wrapper div{
+	max-width:29em;
+	display:block;
+	margin:0 auto;
+	text-align: center;
+	padding: 0em 3em;/*1em*/
+	/*padding: 3em 3em; for desktop*/
+}
+.inner-wrapper.first{
+	/*margin-top: 2em;*/
+	padding-bottom: 1em;/*0 in non-mobile*/
+}
+.inner-wrapper.last{
+	/*margin-bottom: 5em;*/
+	padding-top: 1em;/*0 in non-mobile*/
+}
+.inner-wrapper h2{
+	font-weight: lighter;
+	font-size: 1.5em;/*desktop font-size: 2em*/
+	font-family: arial;
+	color: grey;
+}
+.inner-wrapper p{
+	/*line-height:3em;*/
+	line-height: 2em;
+}
+.inner-wrapper a{
+	pointer-events: auto;/*none for desktop*/
 }
