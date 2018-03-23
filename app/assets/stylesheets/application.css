@@ -146,6 +146,7 @@ p{
 a{
 	text-decoration: none;
 }
+
 nav{
 	box-sizing: border-box;
 	padding:1em;
@@ -179,13 +180,13 @@ nav::after {
     display: table;
     clear: both;
 }
-#menu{
+#menu-btn{
 	width: 20px;
 	float: right;
 	margin-top:15px;
 	cursor:pointer;
 }
-#menu div {
+#menu-btn div {
 	background-color: #004C80;
 	height: 3px;
 	width: 100%;
@@ -210,6 +211,8 @@ nav::after {
 #main-text{
 	text-align: center;
 	padding: 3em 3em;
+	max-width:20em;
+	margin:0 auto;
 	line-height: 1.7em;
 	font-family:arial;
 	color: #665d5d;
@@ -268,7 +271,7 @@ nav::after {
 	margin: 2em auto;
 	/* font-size: 15px; */
 	font-weight: bold;
-	font-family: sans;
+	font-family: sans-serif;
 }
 .communication-row-wrapper{
 	margin-top: 3em;margin-bottom: 6em;font-size:14px;/*desktop: margin-top,margin-bottom: 3em*/
@@ -304,4 +307,66 @@ nav::after {
 }
 .inner-wrapper a{
 	pointer-events: auto;/*none for desktop*/
+}
+
+ul{
+	list-style-type: none;
+	padding:0;
+}
+#navigation{
+	text-align:center;
+	font-size:12px;
+}
+ul a:link,ul a:visited{
+	color:#004C80;
+}
+#navigation ul li{
+	margin-bottom:2em;
+}
+footer{
+	padding: 2em 0;
+}
+#copyright{
+	text-align: left;
+	font-size:11px;
+	margin:0 auto;
+	width:15em;
+}
+.header{
+	margin-bottom:1.5em;font-size:18px;color:grey
+}
+#footer-contact p{
+	margin-bottom: 1em;
+}
+#footer-contact {
+	font-size:13px;
+	max-width :15em;	
+	margin:0 auto;
+	text-align: center;/*text-align: left; when row doesn't collapse*/
+}
+#navigation, #footer-contact,#copyright{
+	margin-bottom:5em;/*0 em when row doesn't collapse*/
+}
+#mobile-btn{
+	padding:1em;
+}
+#mobile-menu{
+	padding:1em;
+	display:none;
+	font-family:sans-serif;
+	font-weight:bold;
+	font-size:14px;
+}
+#mobile-menu ul{
+	text-align: center;
+}
+#mobile-menu ul li{
+	padding:1em 0;
+}
+
+#mobile-menu ul li{
+	border-bottom:1px solid #ececec;
+}
+#mobile-menu ul li:last-child{
+	border:none;
 }
