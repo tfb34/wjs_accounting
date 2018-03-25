@@ -13,14 +13,25 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
-window.onload = loadPage;
 
-function loadPage(){
-	let menuBtn = document.getElementById('menu-btn');
-	if(menuBtn){
-		menuBtn.setAttribute("onclick","toggle('mobile-menu')");
-	}
-}
+document.addEventListener("turbolinks:load", function() {
+    let title = document.getElementsByTagName("title")[0].innerHTML;
+    let currentPage;
+    if(title.includes("home")){
+        currentPage = "nav-home"
+    }else if(title.includes("about")){
+        currentPage = "nav-about"
+    }else if(title.includes("contact")){
+        currentPage = "nav-contact"
+    }else if(title.includes("forms")){
+        currentPage = "nav-forms"
+    }else if(title.includes("payroll")){
+        currentPage = "nav-payroll"
+    }else if(title.includes("services")){
+        currentPage = "nav-services"
+    }
+    document.getElementById(currentPage).className = "selected";
+})
 
 function toggle(id){
     let x = document.getElementById(id);
@@ -30,3 +41,5 @@ function toggle(id){
         x.style.display = "block";
     }
 }
+
+

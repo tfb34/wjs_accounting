@@ -192,7 +192,7 @@ nav::after {
 	width: 100%;
 	margin-bottom: 3px;
 }
-#desktop-navbar{
+#desktop-menu{
 	display:none;
 }
 #home-main-pic{
@@ -373,9 +373,62 @@ footer{
 #map{
 	background-color: #F2F2F2;
 }
+
 /*larger screens (e.g. desktop)*/
 @media only screen and (min-width: 1024px){
-	body{
-		background-color:pink;
+	#menu-btn{
+		display:none;
+	}
+	#desktop-menu{
+		display:block;
+		text-align:center;
+		margin-top:1em;
+	}
+	#desktop-menu a{
+		margin:0 1em;
+		padding-bottom:0.5em;
+	}
+	#desktop-menu a:link{
+		color: #004C80;
+	}
+	#desktop-menu a:visited{
+		color: #004C80;
+	}
+	#desktop-menu a:hover{
+		border-bottom: 2px solid #004C80;
+	}
+	.selected{
+		border-bottom: 2px solid #004C80;
+	}
+	.communication-row-wrapper{
+	margin-top: 3em;margin-bottom: 3em;/*desktop: margin-top,margin-bottom: 3em*/
+	}
+	.inner-wrapper div{
+		padding: 3em 3em;/*1em*/
+		/*padding: 3em 3em; for desktop*/
+	}
+	.inner-wrapper.first{
+		/*margin-top: 2em;*/
+		padding-bottom: 0;/*0 in non-mobile*/
+	}
+	.inner-wrapper.last{
+		/*margin-bottom: 5em;*/
+		padding-top: 0;/*0 in non-mobile*/
+	}
+	.inner-wrapper h2{
+		font-size: 2em;/*desktop font-size: 2em*/
+	}
+	.inner-wrapper p{
+		/*line-height:3em;*/
+		line-height: 3em;
+	}
+	.inner-wrapper a{
+		pointer-events: none;/*none for desktop*/
+	}
+	#footer-contact {
+		text-align: left;/*text-align: left; when row doesn't collapse*/
+	}
+	#navigation, #footer-contact,#copyright{
+		margin-bottom:0;/*0 em when row doesn't collapse*/
 	}
 }
