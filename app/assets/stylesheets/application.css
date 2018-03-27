@@ -16,6 +16,7 @@
 
 body{
     padding:0;margin: 0;
+    background-color:white;
 }
 
 .container{
@@ -150,6 +151,7 @@ a{
 nav{
 	box-sizing: border-box;
 	padding:1em;
+	background-color:white;
 }
 #logo-wrapper{
 	height: 50px;
@@ -351,13 +353,7 @@ footer{
 #mobile-btn{
 	padding:1em;
 }
-#mobile-menu{
-	padding:1em;
-	display:none;
-	font-family:sans-serif;
-	font-weight:bold;
-	font-size:14px;
-}
+
 #mobile-menu ul{
 	text-align: center;
 }
@@ -380,6 +376,7 @@ footer{
 	padding-right:1em;
 	text-align: justify;
 	line-height: 2em;
+	background-color:whitesmoke;
 }
 #payroll-content p{
 	color: #333333;
@@ -391,11 +388,55 @@ footer{
 	padding-right:1em;
 	color:#333333;
 }
+#forms ul{
+	list-style-type: circle;
+	padding-left: 2em;
+	font-size:15px;
+}
+#forms{
+	padding-left:1em;
+	line-height: 2em;
+	padding-top:2em;
+	padding-bottom: 2em;
+	background-color:whitesmoke;
+}
+.page-info-box{
+	background-color:#004C80;
+	width:100%;
+	height:90vh;/*change to permanent height in desktop*/
+	display:table;
+}
+.page-info-box p{
+	color:white;
+	font-size:1.5em;
+	text-align: center;
+	display:table-cell;
+	vertical-align: middle;
+}
+.content-box{
+	padding:1em;
+	font-size:12px;
+	line-height: 1.8em;
+	color:#333;
+	background-color:white;
+}
+.content-box h3, .content-box h4{
+	text-align: center;
+}
+#mobile-menu{
+	padding:1em;
+	display:none;
+	font-family:sans-serif;
+	font-weight:bold;
+	font-size:14px;
+	background-color:white;
+}
 /*larger screens (e.g. desktop)*/
 @media only screen and (min-width: 1024px){
 	#menu-btn{
 		display:none;
 	}
+
 	#desktop-menu{
 		display:block;
 		text-align:center;
@@ -453,11 +494,38 @@ footer{
 	}
 	#home-main-pic{
 	/* height: 20vh; */
-	width: 100%;
-	height: 30vw;
+		width: 100%;
+		height: 30vw;
 	}
 	#payroll-content{
 		padding-top:3em;
 		padding-bottom:3em;
+	}
+	#forms ul, #payroll-content{
+		font-size:1em;
+	}
+	.page-info-box{
+		height: 20em;
+		position:static;
+	}
+	.page-info-box p{
+		font-size:2.5em;
+		display:block;
+		margin-top:2em;
+	}
+	.content-box{
+		font-size:18px;
+		padding:8em;
+		margin-left:3em;
+		margin-right:3em;
+		position:relative;
+		margin-top: -5em;
+	}
+	.content-box h3{
+		font-size:1.5em;
+		font-weight:lighter;
+	}
+	footer{
+		background-color:black;
 	}
 }

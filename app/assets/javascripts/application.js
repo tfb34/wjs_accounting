@@ -21,6 +21,7 @@ document.addEventListener("turbolinks:load", function() {
         currentPage = "nav-home"
     }else if(title.includes("about")){
         currentPage = "nav-about"
+        document.getElementsByTagName('body')[0].style.backgroundColor = "#E8E8E3";
     }else if(title.includes("contact")){
         currentPage = "nav-contact"
     }else if(title.includes("forms")){
