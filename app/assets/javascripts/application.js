@@ -27,7 +27,8 @@ document.addEventListener("turbolinks:load", function() {
     }else if(title.includes("forms")){
         currentPage = "nav-forms"
     }else if(title.includes("payroll")){
-        currentPage = "nav-payroll"
+        currentPage = "nav-payroll";
+        document.getElementsByTagName('body')[0].style.backgroundColor = "#E8E8E3";
     }else if(title.includes("services")){
         currentPage = "nav-services"
     }
