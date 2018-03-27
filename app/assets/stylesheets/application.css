@@ -162,9 +162,8 @@ nav{
 #logo-image{
 	height: 50px;
 	width: 90px;
-	background-color: red;
 	float: left;
-	background-image: url('http://jscpagrowth.com/yahoo_site_admin/assets/images/JSLogoyellow_2.194103958_logo.jpeg');
+	background-image: url('https://s3.us-east-2.amazonaws.com/wjs-accounting-project/images/jslogoyellow.jpeg');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
