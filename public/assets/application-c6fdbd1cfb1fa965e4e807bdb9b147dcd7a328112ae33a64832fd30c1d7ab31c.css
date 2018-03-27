@@ -1,0 +1,531 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+body{
+    padding:0;margin: 0;
+    background-color:white;
+}
+
+.container{
+    padding: 1em;
+}
+.row,
+.column{
+    box-sizing: border-box;
+}
+.row{
+    margin-bottom: 1em;
+}
+.row:before, 
+.row:after{
+    content: "";
+    display: table;
+}
+.row:after{
+    clear: both;
+}
+[class*=column]{
+    position: relative;
+    float:left;
+}
+[class*=column] + [class*=column]{
+    margin-left: 1.6%;
+}
+.column-1{
+    width: 6.866666667%;
+}
+.column-2{
+    width: 15.3333333333%;
+}
+.column-3{
+    width: 23.8%;
+}
+.column-4{
+    width: 32.2666666667%;
+}
+.column-5{ 
+    width: 40.7333333333%;
+}
+.column-6{
+    width: 49.2%;
+}
+.column-7{
+    width: 57.6666666667%;
+}
+.column-8{
+    width: 66.1333333333%;
+}
+.column-9{
+    width: 74.6%;
+}
+.column-10{
+    width: 83.06666667%;
+}
+.column-11{
+    width: 91.5333333333%;
+}
+.column-12{
+    width:100%;
+}
+/*offset*/
+.column-offset-1{
+    margin-left: 8.466666667%;
+}
+.column-offset-2{
+    margin-left: 16.93333333%;
+}
+.column-offset-3{
+    margin-left: 25.4%;
+}
+.column-offset-4{
+    margin-left: 33.866666667%;
+}
+.column-offset-5{
+    margin-left: 42.333333333%;
+}
+.column-offset-6{
+    margin-left: 50.8%;
+}
+.column-offset-7{
+    margin-left: 59.266666667%;
+}
+.column-offset-8{
+    margin-left: 67.733333333%;
+}
+.column-offset-9{
+    margin-left: 76.2%;
+}
+.column-offset-10{
+    margin-left: 84.666666667%;
+}
+.column-offset-11{
+    margin-left: 93.133333333%;
+}
+
+@media only screen and (max-width: 550px){
+    .column-1,
+    .column-2,
+    .column-3,
+    .column-4,
+    .column-5,
+    .column-6,
+    .column-7,
+    .column-8,
+    .column-9,
+    .column-10,
+    .column-11,
+    .column-12 {
+        width: 100%;
+        float: none;
+    }
+
+    [class*=column]{
+      margin-left: 0;
+    }
+    [class*=column] + [class*=column]{
+    margin-left: 0;
+    }
+}
+/*end of my-grid*/
+p{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+}
+
+nav{
+	box-sizing: border-box;
+	padding:1em;
+	background-color:white;
+}
+#logo-wrapper{
+	height: 50px;
+	width: 230px;
+	box-sizing: border-box;
+	float:left;
+}
+#logo-image{
+	height: 50px;
+	width: 90px;
+	float: left;
+	background-image: url('https://s3.us-east-2.amazonaws.com/wjs-accounting-project/images/jslogoyellow.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#logo-text{
+	height: 50px;
+	width: 130px;
+	float: left;
+	font-size: 12px;
+	padding-left: 1em;
+	padding-top: 5px;
+	box-sizing: border-box;
+	background-size:white;
+}
+nav:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#menu-btn{
+	width: 20px;
+	float: right;
+	margin-top:15px;
+	cursor:pointer;
+}
+#menu-btn div {
+	background-color: #004C80;
+	height: 3px;
+	width: 100%;
+	margin-bottom: 3px;
+}
+#desktop-menu{
+	display:none;
+}
+#home-main-pic{
+	/* height: 20vh; */
+	width: 100%;
+	height: 30vw;
+}
+.object-fill_fill{
+	object-fit: fill;
+}
+
+.cover{
+	width:260px;
+	object-fit: cover;
+}
+#main-text{
+	text-align: center;
+	padding: 3em 3em;
+	max-width:20em;
+	margin:0 auto;
+	line-height: 1.7em;
+	font-family:arial;
+	color: #665d5d;
+}
+#service-pic{
+	margin: 0 auto;
+	display: block;
+	height:100px;
+}
+.service-header, .service-description{
+	color: #717171;
+	text-align: center;
+}
+.service-description{
+	font-size: 12px;
+}
+#services{
+	background-color: #ECECEC;
+	padding: 5em 2em 0 2em;
+}
+#read-more-btn{
+	background-color: #004C80;
+	color: white;
+	font-family: arial;
+	padding: 0.5em;
+	font-weight: bold;
+	display: block;
+	width: 6.2em;
+	margin: 5em auto 5em auto;
+}
+#services .column-4{
+	padding-bottom:4em;
+}
+#contact-info{
+	text-align: center;
+	padding: 2.5em 1em 2em 1em;
+}
+#contact-info p{
+	line-height: 2em;
+	font-size: 12px;
+	margin-bottom: 1em;
+}
+#contact-info h3{
+	font-weight: normal;
+	color: rgb(113,113,113);
+}
+.map-contact-wrapper{
+	background-color: #ECECEC;
+}
+.btn{
+	padding: 1em;
+	background-color: #004C80;
+	color: white;
+	display: block;
+	width: 10em;
+	margin: 2em auto;
+	/* font-size: 15px; */
+	font-weight: bold;
+	font-family: sans-serif;
+}
+.communication-row-wrapper{
+	margin-top: 3em;margin-bottom: 6em;font-size:14px;/*desktop: margin-top,margin-bottom: 3em*/
+}
+.inner-wrapper{
+	width:100%;text-align: center
+}
+.inner-wrapper div{
+	max-width:29em;
+	display:block;
+	margin:0 auto;
+	text-align: center;
+	padding: 0em 3em;/*1em*/
+	/*padding: 3em 3em; for desktop*/
+}
+.inner-wrapper.first{
+	/*margin-top: 2em;*/
+	padding-bottom: 1em;/*0 in non-mobile*/
+}
+.inner-wrapper.last{
+	/*margin-bottom: 5em;*/
+	padding-top: 1em;/*0 in non-mobile*/
+}
+.inner-wrapper h2{
+	font-weight: lighter;
+	font-size: 1.5em;/*desktop font-size: 2em*/
+	font-family: arial;
+	color: grey;
+}
+.inner-wrapper p{
+	/*line-height:3em;*/
+	line-height: 2em;
+}
+.inner-wrapper a{
+	pointer-events: auto;/*none for desktop*/
+}
+
+ul{
+	list-style-type: none;
+	padding:0;
+}
+#navigation{
+	text-align:center;
+	font-size:12px;
+}
+ul a:link, ul a:visited{
+	color:#004C80;
+}
+#navigation ul li{
+	margin-bottom:2em;
+}
+footer{
+	padding: 2em 0;
+	color:#333333;
+}
+#copyright{
+	text-align: left;
+	font-size:11px;
+	margin:0 auto;
+	width:15em;
+}
+.header{
+	margin-bottom:1.5em;font-size:18px;color:grey
+}
+#footer-contact p{
+	margin-bottom: 1em;
+}
+#footer-contact {
+	font-size:13px;
+	max-width :15em;	
+	margin:0 auto;
+	text-align: center;/*text-align: left; when row doesn't collapse*/
+}
+#navigation, #footer-contact,#copyright{
+	margin-bottom:5em;/*0 em when row doesn't collapse*/
+}
+#mobile-btn{
+	padding:1em;
+}
+
+#mobile-menu ul{
+	text-align: center;
+}
+#mobile-menu ul li{
+	padding:1em 0;
+}
+
+#mobile-menu ul li{
+	border-bottom:1px solid #ececec;
+}
+#mobile-menu ul li:last-child{
+	border:none;
+}
+#map{
+	background-color: #F2F2F2;
+}
+#payroll-content{
+	font-size:12px;
+	padding-left:1em;
+	padding-right:1em;
+	text-align: justify;
+	line-height: 2em;
+}
+#payroll-content p{
+	color: #333333;
+	font-weight:lighter;
+}
+#payroll-content ul{
+	list-style-type: circle;
+	padding-left:3em;
+	padding-right:1em;
+	color:#333333;
+}
+#forms ul{
+	list-style-type: circle;
+	padding-left: 2em;
+	font-size:15px;
+}
+#forms{
+	padding-left:1em;
+	line-height: 2em;
+	padding-top:2em;
+	padding-bottom: 2em;
+	background-color:whitesmoke;
+}
+.page-info-box{
+	background-color:#004C80;
+	width:100%;
+	height:90vh;/*change to permanent height in desktop*/
+	display:table;
+}
+.page-info-box p{
+	color:white;
+	font-size:1.5em;
+	text-align: center;
+	display:table-cell;
+	vertical-align: middle;
+}
+.content-box{
+	padding:1em;
+	font-size:12px;
+	line-height: 1.8em;
+	color:#333;
+	background-color:white;
+}
+.content-box h3, .content-box h4{
+	text-align: center;
+}
+#mobile-menu{
+	padding:1em;
+	display:none;
+	font-family:sans-serif;
+	font-weight:bold;
+	font-size:14px;
+	background-color:white;
+}
+/*larger screens (e.g. desktop)*/
+@media only screen and (min-width: 1024px){
+	#menu-btn{
+		display:none;
+	}
+
+	#desktop-menu{
+		display:block;
+		text-align:center;
+		margin-top:1em;
+	}
+	#desktop-menu a{
+		margin:0 1em;
+		padding-bottom:0.5em;
+	}
+	#desktop-menu a:link{
+		color: #004C80;
+	}
+	#desktop-menu a:visited{
+		color: #004C80;
+	}
+	#desktop-menu a:hover{
+		border-bottom: 2px solid #004C80;
+	}
+	.selected{
+		border-bottom: 2px solid #004C80;
+	}
+	.communication-row-wrapper{
+	margin-top: 3em;margin-bottom: 3em;/*desktop: margin-top,margin-bottom: 3em*/
+	}
+	.inner-wrapper div{
+		padding: 3em 3em;/*1em*/
+		/*padding: 3em 3em; for desktop*/
+	}
+	.inner-wrapper.first{
+		/*margin-top: 2em;*/
+		padding-bottom: 0;/*0 in non-mobile*/
+	}
+	.inner-wrapper.last{
+		/*margin-bottom: 5em;*/
+		padding-top: 0;/*0 in non-mobile*/
+	}
+	.inner-wrapper h2{
+		font-size: 2em;/*desktop font-size: 2em*/
+	}
+	.inner-wrapper p{
+		/*line-height:3em;*/
+		line-height: 3em;
+	}
+	.inner-wrapper a{
+		pointer-events: none;/*none for desktop*/
+	}
+	.inner-wrapper.first a{
+		pointer-events: auto;
+	}
+	#footer-contact {
+		text-align: left;/*text-align: left; when row doesn't collapse*/
+	}
+	#navigation, #footer-contact,#copyright{
+		margin-bottom:0;/*0 em when row doesn't collapse*/
+	}
+	#home-main-pic{
+	/* height: 20vh; */
+		width: 100%;
+		height: 30vw;
+	}
+	#payroll-content{
+		padding-top:3em;
+		padding-bottom:3em;
+	}
+	#forms ul, #payroll-content{
+		font-size:1em;
+	}
+	.page-info-box{
+		height: 20em;
+		position:static;
+	}
+	.page-info-box p{
+		font-size:2.5em;
+		display:block;
+		margin-top:2em;
+	}
+	.content-box{
+		font-size:18px;
+		padding:8em;
+		margin-left:3em;
+		margin-right:3em;
+		position:relative;
+		margin-top: -5em;
+	}
+	.content-box h3{
+		font-size:1.5em;
+		font-weight:lighter;
+	}
+	footer{
+		background-color:black;
+	}
+}
