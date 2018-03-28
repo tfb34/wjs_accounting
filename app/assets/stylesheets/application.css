@@ -115,30 +115,7 @@ body{
     margin-left: 93.133333333%;
 }
 
-@media only screen and (max-width: 550px){
-    .column-1,
-    .column-2,
-    .column-3,
-    .column-4,
-    .column-5,
-    .column-6,
-    .column-7,
-    .column-8,
-    .column-9,
-    .column-10,
-    .column-11,
-    .column-12 {
-        width: 100%;
-        float: none;
-    }
 
-    [class*=column]{
-      margin-left: 0;
-    }
-    [class*=column] + [class*=column]{
-    margin-left: 0;
-    }
-}
 /*end of my-grid*/
 p{
 	margin:0;
@@ -228,9 +205,6 @@ nav:after {
 	color: #717171;
 	text-align: center;
 }
-.service-description{
-	font-size: 12px;
-}
 #services{
 	background-color: #ECECEC;
 	padding: 5em 2em 0 2em;
@@ -276,7 +250,7 @@ nav:after {
 	font-family: sans-serif;
 }
 .communication-row-wrapper{
-	margin-top: 3em;margin-bottom: 6em;font-size:14px;/*desktop: margin-top,margin-bottom: 3em*/
+	margin-top: 3em;margin-bottom: 6em;/*font-size:14px;sdesktop: margin-top,margin-bottom: 3em*/
 }
 .inner-wrapper{
 	width:100%;text-align: center
@@ -292,6 +266,7 @@ nav:after {
 .inner-wrapper.first{
 	/*margin-top: 2em;*/
 	padding-bottom: 1em;/*0 in non-mobile*/
+	border-right:0px;
 }
 .inner-wrapper.last{
 	/*margin-bottom: 5em;*/
@@ -430,6 +405,71 @@ footer{
 	font-size:14px;
 	background-color:white;
 }
+.service-box-wrapper{
+    padding:0 0em;
+}
+.service-box-wrapper div{
+	height:4em;
+}
+
+@media only screen and (max-width: 650px){/*550px*/
+    .column-1,
+    .column-2,
+    .column-3,
+    .column-4,
+    .column-5,
+    .column-6,
+    .column-7,
+    .column-8,
+    .column-9,
+    .column-10,
+    .column-11,
+    .column-12 {
+        width: 100%;
+        float: none;
+    }
+
+    [class*=column]{
+      margin-left: 0;
+    }
+    [class*=column] + [class*=column]{
+    margin-left: 0;
+    }
+}
+@media only screen and (min-width: 650px){
+	.service-box-wrapper{
+    	padding:0 2em;
+	}
+	.communication-row-wrapper{
+	margin-top: 3em;margin-bottom: 3em;/*desktop: margin-top,margin-bottom: 3em*/
+	}
+	.inner-wrapper div{
+		/*1em*/
+		/*padding: 3em 3em; for desktop*/
+	}
+	.inner-wrapper.first{
+		/*margin-top: 2em;*/
+		padding-bottom: 0;/*0 in non-mobile*/
+		border-right:1px solid grey;
+	}
+	.inner-wrapper.last{
+		/*margin-bottom: 5em;*/
+		padding-top: 0;/*0 in non-mobile*/
+	}
+	.inner-wrapper h2{
+		/*desktop font-size: 2em*/
+	}
+	.inner-wrapper p{
+		/*line-height:3em;*/
+		
+	}
+	.inner-wrapper a{
+		pointer-events: none;/*none for desktop*/
+	}
+	.inner-wrapper.first a{
+		pointer-events: auto;
+	}
+}
 /*larger screens (e.g. desktop)*/
 @media only screen and (min-width: 1024px){
 	#menu-btn{
@@ -457,34 +497,7 @@ footer{
 	.selected{
 		border-bottom: 2px solid #004C80;
 	}
-	.communication-row-wrapper{
-	margin-top: 3em;margin-bottom: 3em;/*desktop: margin-top,margin-bottom: 3em*/
-	}
-	.inner-wrapper div{
-		padding: 3em 3em;/*1em*/
-		/*padding: 3em 3em; for desktop*/
-	}
-	.inner-wrapper.first{
-		/*margin-top: 2em;*/
-		padding-bottom: 0;/*0 in non-mobile*/
-	}
-	.inner-wrapper.last{
-		/*margin-bottom: 5em;*/
-		padding-top: 0;/*0 in non-mobile*/
-	}
-	.inner-wrapper h2{
-		font-size: 2em;/*desktop font-size: 2em*/
-	}
-	.inner-wrapper p{
-		/*line-height:3em;*/
-		line-height: 3em;
-	}
-	.inner-wrapper a{
-		pointer-events: none;/*none for desktop*/
-	}
-	.inner-wrapper.first a{
-		pointer-events: auto;
-	}
+	/*inner wrapper stuff*/
 	#footer-contact {
 		text-align: left;/*text-align: left; when row doesn't collapse*/
 	}
