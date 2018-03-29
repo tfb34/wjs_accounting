@@ -237,6 +237,7 @@ nav:after {
 }
 .map-contact-wrapper{
 	background-color: #ECECEC;
+	margin-bottom:0;
 }
 .btn{
 	padding: 1em;
@@ -545,6 +546,10 @@ footer{
 	}
 	footer{
 		background-color:black;
+		padding-top:6em;
+	}
+	footer a{
+		color: #004C80;
 	}
 	#copyright{
 		color: whitesmoke;
