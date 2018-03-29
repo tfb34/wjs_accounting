@@ -30,7 +30,8 @@ document.addEventListener("turbolinks:load", function() {
         currentPage = "nav-payroll";
         document.getElementsByTagName('body')[0].style.backgroundColor = "#E8E8E3";
     }else if(title.includes("services")){
-        currentPage = "nav-services"
+        currentPage = "nav-services";
+        document.getElementsByTagName('body')[0].style.backgroundColor = "#E8E8E3";
     }
     document.getElementById(currentPage).className = "selected";
 })

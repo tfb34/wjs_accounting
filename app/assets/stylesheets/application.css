@@ -413,7 +413,11 @@ footer{
 .service-box-wrapper h3{
 	display:table-cell;vertical-align:middle;
 }
-
+#accounting-services ul{
+	list-style-type: circle;
+	margin-left: 3em;
+	font-size:14px;
+}
 @media only screen and (max-width: 650px){/*550px*/
     .column-1,
     .column-2,
