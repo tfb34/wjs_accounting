@@ -346,10 +346,9 @@ footer{
 	background-color: #F2F2F2;
 }
 #payroll-content{
-	font-size:12px;
 	padding-left:1em;
 	padding-right:1em;
-	text-align: justify;
+	padding-bottom:3em;
 	line-height: 2em;
 }
 #payroll-content p{
@@ -377,7 +376,7 @@ footer{
 .page-info-box{
 	background-color:#004C80;
 	width:100%;
-	height:90vh;/*change to permanent height in desktop*/
+	height:85vh;/*change to permanent height in desktop*/
 	display:table;
 }
 .page-info-box p{
@@ -389,7 +388,7 @@ footer{
 }
 .content-box{
 	padding:1em;
-	font-size:12px;
+	
 	line-height: 1.8em;
 	color:#333;
 	background-color:white;
@@ -409,7 +408,10 @@ footer{
     padding:0 0em;
 }
 .service-box-wrapper div{
-	height:4em;
+	width:100%;text-align:center;display:table;height:6em;
+}
+.service-box-wrapper h3{
+	display:table-cell;vertical-align:middle;
 }
 
 @media only screen and (max-width: 650px){/*550px*/
@@ -510,7 +512,7 @@ footer{
 		height: 30vw;
 	}
 	#payroll-content{
-		padding-top:3em;
+		/*padding-top:3em;*/
 		padding-bottom:3em;
 	}
 	#forms ul, #payroll-content{
@@ -539,5 +541,8 @@ footer{
 	}
 	footer{
 		background-color:black;
+	}
+	#copyright{
+		color: whitesmoke;
 	}
 }
