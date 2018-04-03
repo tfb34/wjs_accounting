@@ -425,6 +425,7 @@ footer{
 	background-color:white;
 	font-size:15px;
 }
+s
 .content-box.services{
 	margin-top:0;background-color:transparent; padding:0;margin-bottom:3em;
 }
@@ -445,6 +446,29 @@ footer{
 .content-box.main-img p{
 	position:absolute;padding:0 5%;text-align: center;color:white;top:25%;
 }
+.contact-info{
+	color:#333333;
+	text-align: center;
+	line-height:2.3em;
+	margin-bottom:5em;
+}
+.contact-info h4{
+	margin:0;
+	font-size:1.2em;
+}
+.contact-info img{
+	width:60px;
+}
+.contact-info a{
+	color: #004C80;
+}
+.contact-info a:hover{
+	color:#004C80;
+}
+.row.contact{
+	margin-top:4.5em;
+}
+
 @media only screen and (max-width: 650px){/*550px*/
     .column-1,
     .column-2,
