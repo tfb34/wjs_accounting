@@ -24,6 +24,7 @@ document.addEventListener("turbolinks:load", function() {
         document.getElementsByTagName('body')[0].style.backgroundColor = "#E8E8E3";
     }else if(title.includes("contact")){
         currentPage = "nav-contact"
+        document.getElementsByTagName('body')[0].style.backgroundColor = "#E8E8E3";
     }else if(title.includes("forms")){
         currentPage = "nav-forms"
     }else if(title.includes("payroll")){
@@ -36,8 +37,37 @@ document.addEventListener("turbolinks:load", function() {
     document.getElementById(currentPage).className = "selected";
 })
 
+let timer = null;
+window.addEventListener('scroll', function(e){
+    if(timer!=null){
+        clearTimeout(timer);
+    }
+    let navbar = document.getElementsByTagName('nav')[0];
+    if(scrollY > 193){
+        navbar.style.display = "none";
+    }
+    timer = setTimeout(function(){
+        
+        let logo = document.getElementsByClassName('logo-style')[0];
+        let logoRect = logo.getBoundingClientRect();
+        let navRect = navbar.getBoundingClientRect();
+        if(window.scrollY < (logoRect.height + navRect.height)){//logoRect.bottom
+            navbar.style.position = "relative";
+            console.log('true')
+        }else{
+            navbar.style.position ="fixed";
+            navbar.style.top = 0;
+            console.log('false')
+        }
+        navbar.style.display = "block";
+    },500);
+    
+});
+
 function toggle(id){
     let x = document.getElementById(id);
+    let nav = document.getElementsByTagName('nav')[0];
+    nav.appendChild(x);
     if(x.style.display === "block"){
         x.style.display = "none";
     }else{
