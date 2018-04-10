@@ -53,13 +53,16 @@ window.addEventListener('scroll', function(e){
         let navRect = navbar.getBoundingClientRect();
         if(window.scrollY < (logoRect.height + navRect.height)){//logoRect.bottom
             navbar.style.position = "relative";
+            navbar.style.display = "block";
             console.log('true')
         }else{
             navbar.style.position ="fixed";
-            navbar.style.top = 0;
+            navbar.style.display = "block";
+            navbar.style.top = '-67px';
             console.log('false')
+            slideDown();
         }
-        navbar.style.display = "block";
+        //navbar.style.display = "block";
     },500);
     
 });
@@ -72,6 +75,21 @@ function toggle(id){
         x.style.display = "none";
     }else{
         x.style.display = "block";
+    }
+}
+
+
+function slideDown(){
+    let elem = document.getElementsByTagName('nav')[0];
+    let pos = -67;
+    let id = setInterval(frame, 10);
+    function frame(){
+        if(pos === 0){
+            clearInterval(id);
+        }else{
+            pos++;
+            elem.style.top = pos +'px';
+        }
     }
 }
 
