@@ -123,12 +123,14 @@ function toggle(id){
     let menu = document.getElementById('mobile-menu');
     let menuRect = menu.getBoundingClientRect();
     timer2 = setTimeout(function(){
-        if(menuRect.x >=0){
+        if(menu.style.display === "block"){
+            console.log("moving left");
             menu.style.left = -menuRect.width+'px';
+            menu.style.display = "none";
         }else{
             slideRight();
         }
-    },10);
+    },1);
 }
 
 
@@ -152,7 +154,7 @@ function slideRight(){
     let elem = document.getElementById('mobile-menu');
     let elemRect = elem.getBoundingClientRect();
     console.log(elemRect);
-    let pos = -100;
+    let pos = -250;
     let id = setInterval(frame, 0.5);
     function frame(){
         if(pos >= 0){
@@ -162,6 +164,7 @@ function slideRight(){
             elem.style.left = pos + 'px';
         }
     }
+    elem.style.display = "block";
 }
 /*fix this problem*/
 /*
