@@ -124,11 +124,10 @@ p{
 a{
 	text-decoration: none;
 }
-
 nav{
 	box-sizing: border-box;
-	padding:0.5em;
-	background-color:white;
+	padding:0;
+	background-color:#72716b;
 	width:100%;
 	z-index:2;
 }
@@ -167,9 +166,11 @@ nav:after {
 	margin-top:15px;
 	cursor:pointer;
 	margin-right:1em;
+    margin-bottom: 1em;
 }
 #menu-btn div {
-	background-color: #004C80;
+	/*background-color: #004C80;*/
+    background-color:white;
 	height: 3px;
 	width: 100%;
 	margin-bottom: 3px;
@@ -192,17 +193,24 @@ nav:after {
 }
 #main-text{
 	text-align: center;
-	padding: 3em 3em;
+	padding: 5em 1em;/*padding: 3em 3em*/
 	max-width:20em;
 	margin:0 auto;
 	line-height: 1.7em;
 	font-family:arial;
 	color: #665d5d;
+	font-size:18px;
 }
 #service-pic{
 	margin: 0 auto;
 	display: block;
 	height:100px;
+}
+.service-header{
+	font-size:20px;
+}
+.service-description{
+	font-size:18px;
 }
 .service-header, .service-description{
 	color: #717171;
@@ -227,16 +235,17 @@ nav:after {
 }
 #contact-info{
 	text-align: center;
-	padding: 2.5em 1em 2em 1em;
+	padding: 4em 1em;/*padding: 2.5em 1em 2em 1em;*/
 }
 #contact-info p{
-	line-height: 2em;
-	font-size: 12px;
+	line-height: 1.8em;
+	font-size: 17px;
 	margin-bottom: 1em;
 }
 #contact-info h3{
 	font-weight: normal;
 	color: rgb(113,113,113);
+	font-size:25px;
 }
 .map-contact-wrapper{
 	background-color: #ECECEC;
@@ -254,7 +263,10 @@ nav:after {
 	font-family: sans-serif;
 }
 .communication-row-wrapper{
-	margin-top: 3em;margin-bottom: 6em;/*font-size:14px;sdesktop: margin-top,margin-bottom: 3em*/
+	margin-top: 4em;margin-bottom: 6em;/*font-size:14px;sdesktop: margin-top,margin-bottom: 3em*/
+}
+.communication-row-wrapper p{
+	font-size:17px;
 }
 .inner-wrapper{
 	width:100%;text-align: center
@@ -305,7 +317,7 @@ ul a:link, ul a:visited{
 	margin-bottom:2em;
 }
 footer{
-	padding: 2em 0;
+	padding: 8em 0 4em 0;
 	color:#333333;
 }
 #copyright{
@@ -329,9 +341,9 @@ footer{
 #navigation, #footer-contact,#copyright{
 	margin-bottom:5em;/*0 em when row doesn't collapse*/
 }
-#mobile-btn{
+/*#mobile-btn{
 	padding:1em;
-}
+}*/
 
 #mobile-menu ul{
 	text-align: center;
@@ -400,13 +412,22 @@ footer{
 .content-box h3, .content-box h4{
 	text-align: center;
 }
+.content-box.contact{
+    padding-top:5.5em;
+    padding-bottom:3em;
+}
 #mobile-menu{
 	padding:1em;
-	display:none;
+    left:-700px;
 	font-family:sans-serif;
 	font-weight:bold;
 	font-size:14px;
 	background-color:white;
+    position:fixed;
+    z-index: 2;
+    top:50px;/*set in js*/
+    width:90vw;
+    height:50vh;
 }
 .service-box-wrapper{
     padding:0 0em;
@@ -428,7 +449,6 @@ footer{
 	background-color:white;
 	font-size:15px;
 }
-s
 .content-box.services{
 	margin-top:0;background-color:transparent; padding:0;margin-bottom:3em;
 }
@@ -475,8 +495,8 @@ s
 .logo-style{
 	text-align:center;
 	padding:1em 0;
-	background-color:white;
-	color:black;
+	background-color:#72716b;
+	color:white;
 }
 .image{
 	position:relative;
@@ -494,6 +514,20 @@ s
 	font-size:1.5em;
 	font-family:sans-serif;
 	font-weight:600;
+}
+#contact-page-info{
+    background-color: white;padding-top:4em;padding-bottom:3em;
+}
+#contact-page-info h3{
+    color:#717171;font-size:20px;font-weight:500;text-align:center;padding:2em 1em 0em 1em;margin-top:0;
+}
+#menu-btn-wrapper:after{
+    content: "";
+    display:table;
+    clear:both;
+}
+#menu-btn-wrapper{
+    background-color:#72716b;
 }
 @media only screen and (max-width: 650px){/*550px*/
     .column-1,
@@ -648,7 +682,7 @@ s
 	}
 	nav{
 		background-color: rgba(0,0,0,0.7);
-		padding:1em;
+		padding:0.5em 0.5em 1em 0.5em;
 	}
 	.image{
 		margin-top: -4.1em;
@@ -659,4 +693,21 @@ s
 		background-color:#72716b;
 		color:white;
 	}
+	#main-text{
+		text-align: center;
+		padding: 5em 5em;/*padding: 3em 3em*/
+		max-width:20em;
+		margin:0 auto;
+		line-height: 1.7em;
+		font-family:arial;
+		color: #665d5d;
+		font-size:20px;/*font-size:15px or smaller*/
+	}
+    .content-box.contact{
+        padding-top:8em;
+        padding-bottom:6em;
+    }
+    #contact-page-info h3{
+        font-size:28pxs;
+    }
 }

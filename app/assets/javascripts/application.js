@@ -38,51 +38,104 @@ document.addEventListener("turbolinks:load", function() {
 })
 
 let timer = null;
-window.addEventListener('scroll', function(e){
-    if(timer!=null){
-        clearTimeout(timer);
+
+let x = window.matchMedia("(max-width: 650px)");/*min-width: 1024px*/
+
+function setNavbar(x){
+    console.log("hello");
+    if(x.matches){
+        mobileNavbar();
+        console.log("mobile");
+    }else{
+        desktopNavbar();
+        console.log("desktop");
     }
-    let navbar = document.getElementsByTagName('nav')[0];
-    if(scrollY > 193){
-        navbar.style.display = "none";
-    }
-    timer = setTimeout(function(){
-        
+}
+setNavbar(x);
+
+window.addEventListener('resize', function(e){
+    setNavbar(x);
+});
+
+
+function desktopNavbar(){
+    window.addEventListener('scroll', function(e){
+        if(timer!=null){
+            clearTimeout(timer);
+        }
+        let navbar = document.getElementsByTagName('nav')[0];
         let logo = document.getElementsByClassName('logo-style')[0];
         let logoRect = logo.getBoundingClientRect();
         let navRect = navbar.getBoundingClientRect();
-        if(window.scrollY < (logoRect.height + navRect.height)){//logoRect.bottom
+
+        if(window.scrollY < (logoRect.height + navRect.height)+10){
             navbar.style.position = "relative";
-            navbar.style.display = "block";
-            console.log('true')
+                navbar.style.display = "block";
         }else{
+            navbar.style.display = "none";
             navbar.style.position ="fixed";
             navbar.style.display = "block";
-            navbar.style.top = '-67px';
-            console.log('false')
-            slideDown();
+            navbar.style.top ="0px";
         }
-        //navbar.style.display = "block";
-    },500);
-    
-});
+        
+    });
+}
 
+function mobileNavbar(){
+    window.addEventListener('scroll', function(e){
+        if(timer!=null){
+            clearTimeout(timer);
+        }
+        let navbar = document.getElementsByTagName('nav')[0];
+        if(window.scrollY < 200){
+            navbar.style.position = "relative";
+                navbar.style.display = "block";
+        }else{
+            navbar.style.display = "none";
+        }
+        timer = setTimeout(function(){
+            
+            let logo = document.getElementsByClassName('logo-style')[0];
+            let logoRect = logo.getBoundingClientRect();
+            let navRect = navbar.getBoundingClientRect();
+            if(window.scrollY < (logoRect.height + navRect.height)+10){//logoRect.bottom
+                navbar.style.position = "relative";
+                navbar.style.display = "block";
+                console.log('true')
+            }else{
+                navbar.style.position ="fixed";
+                navbar.style.display = "block";
+                navbar.style.top = '-67px';
+                console.log('false')
+                slideDown();
+            }
+            //navbar.style.display = "block";
+        },200);
+        
+    });
+}
+
+let timer2 = null;
 function toggle(id){
-    let x = document.getElementById(id);
-    let nav = document.getElementsByTagName('nav')[0];
-    nav.appendChild(x);
-    if(x.style.display === "block"){
-        x.style.display = "none";
-    }else{
-        x.style.display = "block";
+    if(timer2!= null){
+        clearTimeout(timer2);
     }
+    let menu = document.getElementById('mobile-menu');
+    let menuRect = menu.getBoundingClientRect();
+    timer2 = setTimeout(function(){
+        if(menuRect.x >=0){
+            menu.style.left = -menuRect.width+'px';
+        }else{
+            slideRight();
+        }
+    },10);
 }
 
 
 function slideDown(){
     let elem = document.getElementsByTagName('nav')[0];
     let pos = -67;
-    let id = setInterval(frame, 10);
+    let id = setInterval(frame, 1);
     function frame(){
         if(pos === 0){
             clearInterval(id);
@@ -92,5 +145,40 @@ function slideDown(){
         }
     }
 }
+
+
+function slideRight(){
+    console.log("moving right");
+    let elem = document.getElementById('mobile-menu');
+    let elemRect = elem.getBoundingClientRect();
+    console.log(elemRect);
+    let pos = -100;
+    let id = setInterval(frame, 0.5);
+    function frame(){
+        if(pos >= 0){
+            clearInterval(id);
+        }else{
+            pos++;
+            elem.style.left = pos + 'px';
+        }
+    }
+}
+/*fix this problem*/
+/*
+function slideLeft(){
+    let elem = document.getElementById('mobile-menu');
+    let elemRect = elem.getBoundingClientRect();
+    let pos = 0;
+    let id = setInterval(frame, 0.5);
+    function frame(){
+        if(pos < -100){
+            elem.style.display = "none";
+            clearInterval(id);
+        }else{
+            pos--;
+            elem.style.left = pos + 'px';
+        }
+    }
+}*/
 
 
