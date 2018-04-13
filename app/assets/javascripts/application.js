@@ -39,7 +39,7 @@ document.addEventListener("turbolinks:load", function() {
 
 let timer = null;
 
-let x = window.matchMedia("(max-width: 650px)");/*min-width: 1024px*/
+let x = window.matchMedia("(max-width: 0px)");/*min-width: 1024px*/
 
 function setNavbar(x){
     console.log("hello");
@@ -63,7 +63,7 @@ function desktopNavbar(){
         if(timer!=null){
             clearTimeout(timer);
         }
-        let navbar = document.getElementsByTagName('nav')[0];
+        let navbar = document.getElementsByTagName('nav')[0];/**/
         let logo = document.getElementsByClassName('logo-style')[0];
         let logoRect = logo.getBoundingClientRect();
         let navRect = navbar.getBoundingClientRect();
@@ -115,73 +115,36 @@ function mobileNavbar(){
     });
 }
 
-let timer2 = null;
-function toggle(id){
-    if(timer2!= null){
-        clearTimeout(timer2);
-    }
+function toggle(){
+    console.log("hello");
     let menu = document.getElementById('mobile-menu');
     let menuRect = menu.getBoundingClientRect();
-    timer2 = setTimeout(function(){
-        if(menu.style.display === "block"){
-            console.log("moving left");
-            menu.style.left = -menuRect.width+'px';
-            menu.style.display = "none";
-        }else{
-            slideRight();
-        }
-    },1);
-}
-
-
-function slideDown(){
-    let elem = document.getElementsByTagName('nav')[0];
-    let pos = -67;
-    let id = setInterval(frame, 1);
-    function frame(){
-        if(pos === 0){
-            clearInterval(id);
-        }else{
-            pos++;
-            elem.style.top = pos +'px';
-        }
+    let menuBtn = document.getElementById('menu-btn');
+    let closeBtn = document.getElementById('close-btn');
+    if(menuBtn.style.display === "none"){// show menu-btn and close men
+        console.log(menuBtn);
+        menuBtn.style.display = "block";
+        closeBtn.style.display = "none";
+        closeNav();
+    }else{
+        console.log(menuBtn);;
+        menuBtn.style.display = "none";
+        closeBtn.style.display = "block";
+        openNav();
     }
 }
 
+function openNav(){
+    document.getElementById("mobile-menu").style.width = "250px";
 
-function slideRight(){
-    console.log("moving right");
-    let elem = document.getElementById('mobile-menu');
-    let elemRect = elem.getBoundingClientRect();
-    console.log(elemRect);
-    let pos = -250;
-    let id = setInterval(frame, 0.5);
-    function frame(){
-        if(pos >= 0){
-            clearInterval(id);
-        }else{
-            pos++;
-            elem.style.left = pos + 'px';
-        }
-    }
-    elem.style.display = "block";
+
 }
-/*fix this problem*/
-/*
-function slideLeft(){
-    let elem = document.getElementById('mobile-menu');
-    let elemRect = elem.getBoundingClientRect();
-    let pos = 0;
-    let id = setInterval(frame, 0.5);
-    function frame(){
-        if(pos < -100){
-            elem.style.display = "none";
-            clearInterval(id);
-        }else{
-            pos--;
-            elem.style.left = pos + 'px';
-        }
-    }
-}*/
+
+function closeNav(){
+    document.getElementById("mobile-menu").style.width = "0";
+}
+
+
+
 
 

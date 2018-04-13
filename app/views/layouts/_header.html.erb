@@ -6,11 +6,12 @@
 
 <nav>
     <div id="menu-btn-wrapper">
-    <span id="menu-btn" onclick="toggle('mobile-menu')">
-        <div></div>
-        <div></div>
-        <div></div>
-    </span>
+        <span id="menu-btn" onclick="toggle()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </span>
+        <a href="javascript:void(0)" id="close-btn" onclick="toggle()">&times;</a>
     </div>
 
     <span id="desktop-menu">
@@ -21,9 +22,7 @@
         <%=link_to 'ABOUT US',about_us_path, {id:"nav-about"}%>
         <%=link_to 'CONTACT US', contact_us_path, {id:"nav-contact"}%>
     </span>
-
-</nav>
-<div id="mobile-menu">
+    <div id="mobile-menu" >
     <ul>
         <li><%=link_to "Home", home_path%></li>
         <li><%=link_to "Services",services_path%></li>
@@ -33,5 +32,7 @@
         <li><%=link_to "Contact", contact_us_path%></li>
     </ul>
 </div>
+</nav>
+
 
 

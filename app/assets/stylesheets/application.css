@@ -129,6 +129,7 @@ nav{
 	padding:0;
 	background-color:#72716b;
 	width:100%;
+    height:2.6em;/*new*/
 	z-index:2;
 }
 #logo-wrapper{
@@ -167,6 +168,8 @@ nav:after {
 	cursor:pointer;
 	margin-right:1em;
     margin-bottom: 1em;
+    display: block;
+    position:static;/*testing*/
 }
 #menu-btn div {
 	/*background-color: #004C80;*/
@@ -417,20 +420,23 @@ footer{
     padding-bottom:3em;
 }
 #mobile-menu{
-	padding:1em;
-    display:none;
+    width: 0;
+    height:90vh;
+	/*padding:1em;*/
+    /*display:none;*/
 	font-family:sans-serif;
 	font-weight:bold;
 	font-size:14px;
 	background-color:white;
-    position:fixed;
+    position:absolute;
     z-index: 2;
-    top:50px;/*set in js*/
-    width:250px;
-    height:100%;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+    right:0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top:60px;
+    display:block;
+    
+    
 }
 .service-box-wrapper{
     padding:0 0em;
@@ -524,13 +530,24 @@ footer{
 #contact-page-info h3{
     color:#717171;font-size:20px;font-weight:500;text-align:center;padding:2em 1em 0em 1em;margin-top:0;
 }
+#menu-btn-wrapper{/*prevents change in size when opening & closing menu*/
+    width:100%;
+    height:3.1em;
+    box-sizing: border-box;
+    background-color:#71726b;
+}
 #menu-btn-wrapper:after{
     content: "";
     display:table;
     clear:both;
 }
-#menu-btn-wrapper{
-    background-color:#72716b;
+#close-btn{
+    display: none;
+    font-size:2.5em;
+    color:white;
+    float:right;
+    margin-right:15px;
+    position:static;
 }
 @media only screen and (max-width: 650px){/*550px*/
     .column-1,
@@ -686,6 +703,7 @@ footer{
 	nav{
 		background-color: rgba(0,0,0,0.7);
 		padding:0.5em 0.5em 1em 0.5em;
+        height:4em;
 	}
 	.image{
 		margin-top: -4.1em;
@@ -711,6 +729,12 @@ footer{
         padding-bottom:6em;
     }
     #contact-page-info h3{
-        font-size:28pxs;
+        font-size:28px;
+    }
+    #menu-btn-wrapper{
+        display:none;
+    }
+    #mobile-menu{
+        display:none;
     }
 }
