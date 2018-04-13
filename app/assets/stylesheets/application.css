@@ -549,6 +549,15 @@ footer{
     margin-right:15px;
     position:static;
 }
+.logo-style #header{
+    font-size: 30px;
+}
+.logo-style #subheader{
+    font-size:15px;
+}
+.logo-style #subheader-two{
+    font-size:10px;
+}
 @media only screen and (max-width: 650px){/*550px*/
     .column-1,
     .column-2,
@@ -610,7 +619,15 @@ footer{
 	.inner-wrapper.first a{
 		pointer-events: auto;
 	}
-
+    .logo-style #header{
+        font-size: 40px;
+    }
+    .logo-style #subheader{
+        font-size:17px;
+    }
+    .logo-style #subheader-two{
+        font-size:10px;
+    }
 
 }
 /*larger screens (e.g. desktop)*/
@@ -736,5 +753,14 @@ footer{
     }
     #mobile-menu{
         display:none;
+    }
+    .logo-style #header{
+        font-size: 50px;
+    }
+    .logo-style #subheader{
+        font-size:18px;
+    }
+    .logo-style #subheader-two{
+        font-size:12px;
     }
 }
