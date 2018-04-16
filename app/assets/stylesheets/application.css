@@ -372,7 +372,7 @@ footer{
 #payroll-content{
 	padding-left:1em;
 	padding-right:1em;
-	padding-bottom:3em;
+	padding-bottom:5em;
 	line-height: 2em;
 }
 #payroll-content p{
@@ -439,9 +439,7 @@ footer{
     overflow-x: hidden;
     transition: 0.5s;
     padding-top:60px;
-    display:block;
-    
-    
+    display:block; 
 }
 .service-box-wrapper{
     padding:0 0em;
@@ -479,7 +477,7 @@ footer{
 	position:absolute;
 }
 .content-box.main-img img, .overlay{
-	width:100%;height:50vh;
+	width:100%;height:207px;
 }
 .content-box.main-img p{
 	position:absolute;padding:0 5%;text-align: center;color:white;top:25%;
@@ -641,6 +639,14 @@ footer{
     -moz-animation-fill-mode:both;
     animation-fill-mode:both;
 }
+.header-img{
+    position:relative;
+    height:207px;
+    width:100%;
+}
+.description{
+    font-size:18px;text-align:center;line-height:1.8em;color:#717171;
+}
 @media only screen and (max-width: 650px){/*550px*/
     .column-1,
     .column-2,
@@ -693,6 +699,60 @@ footer{
     nav img{
         width:80px;
     }
+    .header-img{
+        position:relative;
+        height:300px;
+    }
+    .overlay{
+        height:300px;
+    }
+}
+@media only screen and (min-width: 650px){
+    .row.services{
+    display: -ms-flex; display: -webkit-flex; display:flex;
+    }
+    .service-box-wrapper{
+        padding:0 2em;
+    }
+    .communication-row-wrapper{
+    margin-top: 3em;margin-bottom: 3em;/*desktop: margin-top,margin-bottom: 3em*/
+    }
+    .inner-wrapper div{
+        /*1em*/
+        /*padding: 3em 3em; for desktop*/
+    }
+    .inner-wrapper.first{
+        /*margin-top: 2em;*/
+        padding-bottom: 0;/*0 in non-mobile*/
+        border-right:1px solid grey;
+    }
+    .inner-wrapper.last{
+        /*margin-bottom: 5em;*/
+        padding-top: 0;/*0 in non-mobile*/
+    }
+    .inner-wrapper h2{
+        /*desktop font-size: 2em*/
+    }
+    .inner-wrapper p{
+        /*line-height:3em;*/
+        
+    }
+    .inner-wrapper a{
+        pointer-events: none;/*none for desktop*/
+    }
+    .inner-wrapper.first a{
+        pointer-events: auto;
+    }
+    .logo-style #header{
+        font-size: 40px;
+    }
+    .logo-style #subheader{
+        font-size:17px;
+    }
+    .logo-style #subheader-two{
+        font-size:10px;
+    }
+
 }
 @media only screen and (min-width:700px){
     #home-main-image{
@@ -719,55 +779,18 @@ footer{
         padding:1em;
         color:white;
     }
-    
+    .header-img{
+        position:relative;
+        height:400px;
+    }
+    .overlay{
+        height:400px;
+    }
+    .description{
+        font-size:20px;
+    }
 }
-@media only screen and (min-width: 650px){
-	.row.services{
-	display: -ms-flex; display: -webkit-flex; display:flex;
-	}
-	.service-box-wrapper{
-    	padding:0 2em;
-	}
-	.communication-row-wrapper{
-	margin-top: 3em;margin-bottom: 3em;/*desktop: margin-top,margin-bottom: 3em*/
-	}
-	.inner-wrapper div{
-		/*1em*/
-		/*padding: 3em 3em; for desktop*/
-	}
-	.inner-wrapper.first{
-		/*margin-top: 2em;*/
-		padding-bottom: 0;/*0 in non-mobile*/
-		border-right:1px solid grey;
-	}
-	.inner-wrapper.last{
-		/*margin-bottom: 5em;*/
-		padding-top: 0;/*0 in non-mobile*/
-	}
-	.inner-wrapper h2{
-		/*desktop font-size: 2em*/
-	}
-	.inner-wrapper p{
-		/*line-height:3em;*/
-		
-	}
-	.inner-wrapper a{
-		pointer-events: none;/*none for desktop*/
-	}
-	.inner-wrapper.first a{
-		pointer-events: auto;
-	}
-    .logo-style #header{
-        font-size: 40px;
-    }
-    .logo-style #subheader{
-        font-size:17px;
-    }
-    .logo-style #subheader-two{
-        font-size:10px;
-    }
 
-}
 /*larger screens (e.g. desktop)*/
 @media only screen and (min-width: 1024px){
 	#menu-btn{
@@ -808,7 +831,7 @@ footer{
 	}
 	#payroll-content{
 		/*padding-top:3em;*/
-		padding-bottom:3em;
+		padding-bottom:5.5em;
 	}
 	#forms ul, #payroll-content{
 		font-size:1em;
@@ -825,11 +848,11 @@ footer{
 	}
 	.content-box{
 		font-size:18px;
-		padding:8em;
+		padding:0;
 		margin-left:3em;
 		margin-right:3em;
 		position:relative;
-		margin-top: -5em;
+		
 	}
 	.content-box h3{
 		font-size:1.5em;
@@ -880,7 +903,7 @@ footer{
 		font-size:20px;/*font-size:15px or smaller*/
 	}
     .content-box.contact{
-        padding-top:8em;
+        /*padding-top:8em;*/
         padding-bottom:6em;
     }
     #contact-page-info h3{
@@ -900,5 +923,15 @@ footer{
     }
     .logo-style #subheader-two{
         font-size:12px;
+    }
+    .header-img{
+        position:relative;
+        height:510px;
+    }
+    .overlay{
+        height:510px;
+    }
+    .description{
+        font-size:24px;
     }
 }
