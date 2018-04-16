@@ -13,6 +13,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+let initialNavColor;
 
 document.addEventListener("turbolinks:load", function() {
     let title = document.getElementsByTagName("title")[0].innerHTML;
@@ -34,15 +35,23 @@ document.addEventListener("turbolinks:load", function() {
         currentPage = "nav-services";
         document.getElementsByTagName('body')[0].style.backgroundColor = "#E8E8E3";
     }
+
+    if(title.includes("home")){
+        initialNavColor = "transparent";
+    }else{
+        initialNavColor = "rgba(0,0,0,0.7)"
+    }
+    document.getElementsByTagName('nav')[0].style.backgroundColor = initialNavColor;
     document.getElementById(currentPage).className = "selected";
 })
 
 let timer = null;
 
-let x = window.matchMedia("(max-width: 0px)");/*min-width: 1024px*/
+let x = window.matchMedia("(max-width: 1024px)");/*min-width: 1024px*/
 
 function setNavbar(x){
     console.log("hello");
+    console.log(x);
     if(x.matches){
         mobileNavbar();
         console.log("mobile");
@@ -59,58 +68,20 @@ window.addEventListener('resize', function(e){
 
 
 function desktopNavbar(){
-    window.addEventListener('scroll', function(e){
-        if(timer!=null){
-            clearTimeout(timer);
-        }
-        let navbar = document.getElementsByTagName('nav')[0];/**/
-        let logo = document.getElementsByClassName('logo-style')[0];
-        let logoRect = logo.getBoundingClientRect();
-        let navRect = navbar.getBoundingClientRect();
-
-        if(window.scrollY < (logoRect.height + navRect.height)+10){
-            navbar.style.position = "relative";
-                navbar.style.display = "block";
-        }else{
-            navbar.style.display = "none";
-            navbar.style.position ="fixed";
-            navbar.style.display = "block";
-            navbar.style.top ="0px";
-        }
-        
-    });
+    console.log("desktop");
+    let navbar = document.getElementsByTagName('nav')[0];/**/
+    navbar.style.backgroundColor="rgba(0,0,0,0.7)";
 }
 
 function mobileNavbar(){
     window.addEventListener('scroll', function(e){
-        if(timer!=null){
-            clearTimeout(timer);
-        }
+       
         let navbar = document.getElementsByTagName('nav')[0];
-        if(window.scrollY < 200){
-            navbar.style.position = "relative";
-                navbar.style.display = "block";
+        if(window.scrollY >10){
+            navbar.style.backgroundColor="rgba(0,0,0,0.7)";
         }else{
-            navbar.style.display = "none";
+            navbar.style.backgroundColor= initialNavColor;
         }
-        timer = setTimeout(function(){
-            
-            let logo = document.getElementsByClassName('logo-style')[0];
-            let logoRect = logo.getBoundingClientRect();
-            let navRect = navbar.getBoundingClientRect();
-            if(window.scrollY < (logoRect.height + navRect.height)+10){//logoRect.bottom
-                navbar.style.position = "relative";
-                navbar.style.display = "block";
-                console.log('true')
-            }else{
-                navbar.style.position ="fixed";
-                navbar.style.display = "block";
-                navbar.style.top = '-67px';
-                console.log('false')
-                slideDown();
-            }
-            //navbar.style.display = "block";
-        },200);
         
     });
 }
@@ -127,7 +98,7 @@ function toggle(){
         closeBtn.style.display = "none";
         closeNav();
     }else{
-        console.log(menuBtn);;
+        console.log(menuBtn);
         menuBtn.style.display = "none";
         closeBtn.style.display = "block";
         openNav();

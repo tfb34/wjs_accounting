@@ -126,11 +126,16 @@ a{
 }
 nav{
 	box-sizing: border-box;
+    height:3em;
 	padding:0;
-	background-color:#72716b;
+	/*background-color:transparent;/*#72716b;*/
 	width:100%;
-    height:2.6em;/*new*/
+    /*height:2.6em;*//*new*/
 	z-index:2;
+    position:fixed;
+}
+nav img{
+    width:50px;top:15%;left:2em;position:absolute;
 }
 #logo-wrapper{
 	height: 40px;
@@ -467,7 +472,7 @@ footer{
 /*services page*/
 .content-box.main-img{
 	padding:0;position:relative;
-	margin:10%;background-color:transparent;
+	margin:0/*10%*/;background-color:transparent;
 }
 .overlay{
 	background: linear-gradient(to bottom,transparent 0,rgba(0,0,0,0.65) 100%);
@@ -532,9 +537,9 @@ footer{
 }
 #menu-btn-wrapper{/*prevents change in size when opening & closing menu*/
     width:100%;
-    height:3.1em;
+    height:3em;
     box-sizing: border-box;
-    background-color:#71726b;
+    /*background-color:#71726b;*/
 }
 #menu-btn-wrapper:after{
     content: "";
@@ -557,6 +562,84 @@ footer{
 }
 .logo-style #subheader-two{
     font-size:10px;
+}
+#home-main-image{
+    position:relative;
+    width:100%;
+    height:360px;
+    background: url("https://s3.us-east-2.amazonaws.com/wjs-accounting-project/images/pexels-photo-275582.jpeg") no-repeat center;
+    background-size: cover;
+}
+#home-main-image h1{
+    margin:0;text-align:center;color:white;
+    padding-top: 3em;font-size:1.5em;
+}
+#home-main-image h3{
+    text-align: center;color:white;font-weight:300;animation-delay: 0.2s;
+    font-size:15px;padding:0 5%;line-height:1.5em;
+}
+#home-main-image div{
+    text-align: center;
+    margin-top:20%;
+    animation-delay: 0.3s;
+}
+#home-main-image div span{
+    font-size: 12px;
+    font-weight:bold;
+    margin:1%;
+    border:3px solid white;
+    background-color:rgba(1,2,3,0.5);
+    padding:1em;
+    color:white;
+    cursor: pointer;
+}
+@keyframes fadeDown{
+    0%{
+        opacity:0;
+        -webkit-transform: translateY(-20px);
+        -ms-transform: translateY(-20px);
+        -moz-transform: translateY(-20px);
+        transform: translateY(-20px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+@keyframes fadeUp{
+    0%{
+        opacity:0;
+        -webkit-transform: translateY(20px);
+        -ms-transform: translateY(20px);
+        -moz-transform: translateY(20px);
+        transform: translateY(20px);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        transform: translateY(0px);
+    }
+}
+.fadeUp{
+    -webkit-animation-name:fadeUp;
+    -moz-animation-name:fadeUp;
+}
+.fadeDown{
+    -webkit-animation-name:fadeDown;
+    -moz-animation-name:fadeDown;
+}
+.animate{
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode:both;
+    -moz-animation-fill-mode:both;
+    animation-fill-mode:both;
 }
 @media only screen and (max-width: 650px){/*550px*/
     .column-1,
@@ -582,7 +665,62 @@ footer{
     margin-left: 0;
     }
 }
+@media only screen and (min-width:500px){
+    #home-main-image{
+        height:450px;
+    }
+    #home-main-image h1{
+        padding-top: 20%;font-size:2.2em;margin-left:10%;margin:0 10%;
+    }
+    #home-main-image h3{
+        font-weight:lighter;
+        font-size:17px;
+        padding:0;
+    }
+    #home-main-image div{
+        text-align: center;
+        margin-top:10%;
+        animation-delay: 0.3s;
+    }
+    #home-main-image div span{
+        font-size: 12px;
+        font-weight:bold;
+        border:3px solid white;
+        background-color:rgba(1,2,3,0.5);
+        padding:1em;
+        color:white;
+    }
+    nav img{
+        width:80px;
+    }
+}
+@media only screen and (min-width:700px){
+    #home-main-image{
+        height:800px;
+    }
+    #home-main-image h1{
+        padding-top: 10%;font-size:3.5em;margin-left:10%;margin:0 10%;
+    }
+    #home-main-image h3{
+        font-weight:lighter;
+        font-size:20px;
+        padding:5% 8% 0 8%;
 
+    }
+    #home-main-image div{
+        text-align: center;
+        margin-top:10%;
+    }
+    #home-main-image div span{/*DRY*/
+        font-size: 18px;
+        font-weight:500;
+        border:3px solid white;
+        background-color:rgba(1,2,3,0.5);
+        padding:1em;
+        color:white;
+    }
+    
+}
 @media only screen and (min-width: 650px){
 	.row.services{
 	display: -ms-flex; display: -webkit-flex; display:flex;
