@@ -52,13 +52,7 @@ let x = window.matchMedia("(max-width: 1024px)");/*min-width: 1024px*/
 function setNavbar(x){
     console.log("hello");
     console.log(x);
-    if(x.matches){
-        mobileNavbar();
-        console.log("mobile");
-    }else{
-        desktopNavbar();
-        console.log("desktop");
-    }
+    mobileNavbar();
 }
 setNavbar(x);
 

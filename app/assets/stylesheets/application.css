@@ -645,7 +645,13 @@ footer{
     width:100%;
 }
 .description{
-    font-size:18px;text-align:center;line-height:1.8em;color:#717171;
+    font-size:18px;text-align:center;line-height:1.8em;color:#717171;padding-bottom:5em;
+    min-width:50px;max-width:500px;margin:0 auto;
+}
+.content-box-no-padding{
+	background:white;
+	padding-top:5.5em;padding-bottom:3em;
+	padding-left:1em;padding-right:1em;
 }
 @media only screen and (max-width: 650px){/*550px*/
     .column-1,
@@ -847,12 +853,12 @@ footer{
 		margin-top:2em;
 	}
 	.content-box{
-		font-size:18px;
-		padding:0;
-		margin-left:3em;
-		margin-right:3em;
+		font-size:20px;
+		padding:5em 4em 5em 4em;
+		margin:0 auto;
 		position:relative;
-		
+		min-width:0;max-width: 1080px;
+		box-sizing: border-box;
 	}
 	.content-box h3{
 		font-size:1.5em;
@@ -933,5 +939,8 @@ footer{
     }
     .description{
         font-size:24px;
+    }
+    .content-box-no-padding{
+    	min-width:0;max-width:1080px;padding-left:0;padding-right:0;margin:0 auto;
     }
 }
