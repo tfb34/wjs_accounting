@@ -81,20 +81,20 @@ function mobileNavbar(){
 }
 
 function toggle(){
-    console.log("hello");
-    let menu = document.getElementById('mobile-menu');
-    let menuRect = menu.getBoundingClientRect();
-    let menuBtn = document.getElementById('menu-btn');
-    let closeBtn = document.getElementById('close-btn');
-    if(menuBtn.style.display === "none"){// show menu-btn and close men
-        console.log(menuBtn);
-        menuBtn.style.display = "block";
-        closeBtn.style.display = "none";
+    let menuBtnDivs = document.getElementById("menu-btn").getElementsByTagName("div");
+    let div = menuBtnDivs[0];
+    let div2 = menuBtnDivs[1];
+    if(div.classList.contains("lean-right")){//close menu
+        div.classList.remove("lean-right");
+        div2.classList.remove("lean-left");
+        div.classList.add("top-parallel");
+        div2.classList.add("bottom-parallel");
         closeNav();
     }else{
-        console.log(menuBtn);
-        menuBtn.style.display = "none";
-        closeBtn.style.display = "block";
+        div.classList.remove("top-parallel");
+        div2.classList.remove("bottom-parallel");
+        div.classList.add("lean-right");
+        div2.classList.add("lean-left");
         openNav();
     }
 }
