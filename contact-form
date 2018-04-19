@@ -1,0 +1,62 @@
+<form method=post action="https://p10.secure.webhosting.luminate.com/forms?ssc=us1&login=elisabethb_cpatrust" style="background-color:#edecea;margin:0 auto;position:relative;width:400px;padding:3em;color:#404041;border-sizing:border-box;">
+<font face="sans-serif" >
+
+<b>First Name:</b>
+<p>
+<input class="form-input" type="text" name="firstName" placeholder="John" required>
+<p>
+<b>Last Name:</b><br>
+<p>
+<input class="form-input" type="text" name="lastName" placeholder="Doe" size="27" required>
+<p>
+<b>Email</b><br>
+<p>
+<input class="form-input" type="email" name="email" placeholder="youremail@example.com" size="27" required>
+<p>
+<b>Phone</b><br>
+<p>
+<input type="tel" class="form-input" placeholder="Phone Number" name="phone" required>
+<p>
+<b>Company:</b><br>
+<p>
+<input class="form-input" type="text" name="company" size="27">
+<p>
+<b>Please add any comments you have below:</b>
+<p>
+</font>
+<textarea class="form-text-input" cols="40" rows="10" placeholder="Text" name="Comments" required></textarea>
+
+<p><br>
+<input class="form-btn send" type="submit" value="Send">
+<input class="reset" type="reset" value="Reset" >
+</form>
+
+// contact- form css
+
+.form-input{
+  border:0;width:100%;height:3em;padding-left:2em;border:1px solid white;border-radius:5px;
+}
+.form-text-input{
+  border:1px solid white;border-radius:5px;padding:1em 2em;
+}
+.form-btn{
+  padding:1em 2em;
+  border-radius:5px;
+}
+.send{
+  color:white;
+  background-color:#004C80;
+  border:1px solid white;
+}
+.send:hover{
+  background-color:#004473 ;
+  cursor:pointer;
+}
+.reset{
+   border:1px solid white;border-radius:5px;padding:1em 2em; 
+}
+.reset:hover{
+  background-color:#72716b;
+  color:white;
+  cursor:pointer;
+}
