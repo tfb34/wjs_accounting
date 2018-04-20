@@ -278,7 +278,8 @@ nav:after {
 	background-color: #004C80;
 	color: white;
 	font-family: arial;
-	padding: 0.5em;
+	padding:1em;
+    text-align:center;
 	font-weight: bold;
 	display: block;
 	width: 6.2em;
@@ -568,9 +569,9 @@ footer{
 	z-index:1;
 }
 .page-info-tag span{
-	font-size:1.5em;
-	font-family:sans-serif;
-	font-weight:600;
+	font-size:2em;
+	font-family:Georgia;
+	font-weight:500;
 }
 #contact-page-info{
     background-color: white;padding-top:4em;padding-bottom:3em;
@@ -735,6 +736,23 @@ form h3{
   color:white;
   cursor:pointer;
 }
+.payroll-icons{
+    padding-top:2.5em;
+    padding-bottom:3em;
+}
+.payroll-icons img{
+    width:80px;
+}
+.payroll-icons div{
+    text-align: center;
+}
+.payroll-icons p{
+    font-weight:bold !important;padding-top:2em;line-height: 1.5em;
+    font-family: sans-serif;
+}
+.payroll-icons #middle{
+    padding:4.5em 0;
+}
 @media only screen and (max-width: 650px){/*550px*/
     .column-1,
     .column-2,
@@ -814,7 +832,7 @@ form h3{
         padding:0 2em;
     }
     .communication-row-wrapper{
-        margin-top: 3em;margin-bottom: 3em;/*desktop: margin-top,margin-bottom: 3em*/
+        margin-top: 5em;margin-bottom: 5em;/*desktop: margin-top,margin-bottom: 3em*/
     }
     .inner-wrapper.first{
         padding-bottom: 0;
@@ -837,6 +855,12 @@ form h3{
     }
     .logo-style #subheader-two{
         font-size:10px;
+    }
+    .payroll-icons #middle{
+        padding:0;
+    }
+    .payroll-icons p{
+        padding-top:1.2em;
     }
 }
 @media only screen and (min-width:700px){
@@ -882,6 +906,9 @@ form h3{
     }
     form{
         max-width:700px;
+    }
+    .payroll-icons p{
+        padding:0 1em;
     }
 }
 
@@ -958,6 +985,9 @@ form h3{
 		display:block;
 		margin-top:2em;
 	}
+    .page-info-tag span{
+        font-size:2.5em;
+    }
 	.content-box{
 		font-size:20px;
 		padding:5em 4em 5em 4em;
@@ -978,7 +1008,7 @@ form h3{
 		color: #004C80;
 	}
 	#copyright{
-		color: whitesmoke;
+		color: grey;
 	}
 	.content-box.main-img{
 		margin:-3.7em 3em 3em 3em;
@@ -1060,5 +1090,10 @@ form h3{
         padding:3em;
         line-height:1.5em;
         font-size:20px;
+    }
+    .payroll-icons p{
+        padding:0 2.5em;
+        line-height:1.5em;
+        font-size:15px;
     }
 }
