@@ -13,7 +13,10 @@
  *= require_tree .
  *= require_self
  */
-
+:root{
+    --main-color: teal;
+    --text-color: #717171;
+}
 body{
     padding:0;margin: 0;
     background-color:white;
@@ -258,7 +261,7 @@ nav:after {
 #service-pic{
 	margin: 0 auto;
 	display: block;
-	height:100px;
+	height:90px;
 }
 .service-header{
 	font-size:20px;
@@ -272,10 +275,10 @@ nav:after {
 }
 #services{
 	background-color: #ECECEC;
-	padding: 5em 2em 0 2em;
+	padding: 8em 2em 5em 2em;/*5 2 0 2*/
 }
 #read-more-btn{
-	background-color: #004C80;
+	background-color: var(--main-color);
 	color: white;
 	font-family: arial;
 	padding:1em;
@@ -302,13 +305,16 @@ nav:after {
 	color: rgb(113,113,113);
 	font-size:25px;
 }
+#contact-info a{
+    color: var(--main-color);
+}
 .map-contact-wrapper{
 	background-color: #ECECEC;
 	margin-bottom:0;
 }
 .btn{
 	padding: 1em;
-	background-color: #004C80;
+	background-color: var(--main-color);
 	color: white;
 	display: block;
 	width: 10em;
@@ -366,7 +372,7 @@ ul{
 	font-size:12px;
 }
 ul a:link, ul a:visited{
-	color:#004C80;
+	color:var(--main-color);
 }
 #navigation ul li{
 	margin-bottom:2em;
@@ -418,9 +424,9 @@ footer{
 	padding-bottom:5em;
 	line-height: 2em;
 }
-#payroll-content p{
+#payroll-content p, .sub-description{
 	color: #333333;
-	font-weight:lighter;
+	font-weight:lighter;text-align:center;
 }
 #payroll-content ul{
 	list-style-type: circle;
@@ -440,7 +446,7 @@ footer{
 	background-color:whitesmoke;
 }
 .page-info-box{
-	background-color:#004C80;
+	background-color:var(--main-color);
 	width:100%;
 	height:85vh;/*change to permanent height in desktop*/
 	display:table;
@@ -454,7 +460,7 @@ footer{
 }
 .content-box{
 	padding:1em;
-	z-index:-2;
+	z-index:0;/*-2*/
 	line-height: 1.8em;
 	color:#333;
 	background-color:white;
@@ -542,10 +548,10 @@ footer{
 	width:60px;
 }
 .contact-info a{
-	color: #004C80;
+	color: var(--main-color);
 }
 .contact-info a:hover{
-	color:#004C80;
+	color:var(--main-color);
 }
 .row.contact{
 	margin-top:4.5em;
@@ -627,11 +633,18 @@ footer{
     font-size: 12px;
     font-weight:bold;
     margin:1%;
-    border:3px solid white;
+    border:1px solid white;
     background-color:rgba(1,2,3,0.5);
     padding:1em;
-    color:white;
     cursor: pointer;
+    letter-spacing: 1.5px;
+}
+span#contact-btn{
+    background-color:teal !important;
+    /*border:1px solid teal !important;*/
+}
+#home-main-image div span a{
+    color:white;
 }
 @keyframes fadeDown{
     0%{
@@ -690,7 +703,7 @@ footer{
 }
 .description{
     font-size:18px;text-align:center;line-height:1.8em;color:#717171;padding-bottom:5em;
-    min-width:50px;max-width:500px;margin:0 auto;
+    min-width:50px;max-width:700px;margin:0 auto;
 }
 .content-box-no-padding{
 	background:white;
@@ -701,7 +714,7 @@ footer{
 
 }
 form{
-    background-color:#edecea;margin:0 auto;width:100%;color:#404041;box-sizing:border-box;
+    background-color:#edecea;margin:0 auto;width:100%;color:#717171;box-sizing:border-box;
     padding:3em 1em 5em 1em;
 }
 form h3{
@@ -721,7 +734,7 @@ form h3{
 }
 .send{
   color:white;
-  background-color:#004C80;
+  background-color:var(--main-color);
   border:1px solid white;
 }
 .send:hover{
@@ -750,8 +763,70 @@ form h3{
     font-weight:bold !important;padding-top:2em;line-height: 1.5em;
     font-family: sans-serif;
 }
-.payroll-icons #middle{
+#middle{
     padding:4.5em 0;
+}
+.forms img{
+    width:100px;height: 100px;
+}
+.forms p{
+    line-height: normal;
+    font-size:16px;
+    color:#717171;
+}
+.forms a{
+    color:#717171;
+    display: block;
+    margin-bottom:0.5em;
+}
+.forms a:hover{
+    color:teal;
+}
+.forms{
+    padding-top:3em;
+    z-index:1;
+}
+#form-bottom-row{
+    margin-bottom: 5em;
+}
+.calculator{
+    max-width:400px;background-color:teal;padding:2em;border:1px solid teal;border-radius: 10px;
+    margin:0 auto;margin-bottom:8em;
+}
+.calculator p{
+    color:white;
+}
+.calculator input{
+    background-color:teal;border:0;border-bottom:2px solid white;color:white;padding:0.5em;
+    width:100%;
+}
+.error{
+    border-bottom:2px solid red !important;
+}
+.calculator input::placeholder{
+    color:#eeeeee;
+}
+.calculator input:focus, .calculator button:focus{
+    outline:none;
+}
+.calculator button{
+    color:white;margin-top:2em;background-color:grey;cursor:pointer;padding:0.5em 1em;
+}
+.calculator button:hover{
+    background-color:#757575;
+}
+.calculator button#reset{
+    background-color:white;color:grey;
+}
+.calculator button#reset:hover{
+    background-color:#e0e0e0;
+}
+.subheader{
+    color:#717171;letter-spacing: 2px;text-align: center;margin-bottom: 2em;
+    font-size:x-large;font-weight:500;
+}
+#payroll-content article{
+    margin-bottom:4em;
 }
 @media only screen and (max-width: 650px){/*550px*/
     .column-1,
@@ -798,12 +873,10 @@ form h3{
         animation-delay: 0.3s;
     }
     #home-main-image div span{
-        font-size: 12px;
-        font-weight:bold;
-        border:3px solid white;
-        background-color:rgba(1,2,3,0.5);
-        padding:1em;
-        color:white;
+        border:2px solid white;
+    }
+    span#contact-btn{
+        /*border:2px solid teal !important;*/
     }
     nav img{
         width:80px;
@@ -856,7 +929,7 @@ form h3{
     .logo-style #subheader-two{
         font-size:10px;
     }
-    .payroll-icons #middle{
+     #middle{
         padding:0;
     }
     .payroll-icons p{
@@ -883,13 +956,12 @@ form h3{
         text-align: center;
         margin-top:10%;
     }
-    #home-main-image div span{/*DRY*/
+    #home-main-image div span{
         font-size: 18px;
         font-weight:500;
-        border:3px solid white;
-        background-color:rgba(1,2,3,0.5);
-        padding:1em;
-        color:white;
+    }
+    span#contact-btn{
+        /*border:2px solid teal !important;*/
     }
     .header-img{
         position:relative;
@@ -909,6 +981,9 @@ form h3{
     }
     .payroll-icons p{
         padding:0 1em;
+    }
+    .subheader{
+        font-size:30px;
     }
 }
 
@@ -948,11 +1023,17 @@ form h3{
 		color: white;
 	}
 	#desktop-menu a:hover{
-		border-bottom: 2px solid #004C80;
+		border-bottom: 2px solid var(--main-color);
 	}
 	.selected{
-		border-bottom: 2px solid #004C80;
+		border-bottom: 2px solid var(--main-color);
 	}
+    #home-main-image div span{
+        border:2.5px solid white;
+    }
+    span#contact-btn {
+        /*border:2.5px solid teal !important;*/
+    }
     #home-main-image h3{
         font-weight:lighter;
         font-size:20px;
@@ -1005,7 +1086,7 @@ form h3{
 		padding-top:6em;
 	}
 	footer a{
-		color: #004C80;
+		color: var(--main-color);
 	}
 	#copyright{
 		color: grey;
@@ -1073,7 +1154,7 @@ form h3{
         height:510px;
     }
     .description{
-        font-size:24px;
+        font-size:22px;
     }
     .content-box-no-padding{
     	min-width:0;max-width:1080px;padding-left:0;padding-right:0;margin:0 auto;
@@ -1096,4 +1177,7 @@ form h3{
         line-height:1.5em;
         font-size:15px;
     }
+    .subheader{
+        font-size:40px;
+    }   
 }

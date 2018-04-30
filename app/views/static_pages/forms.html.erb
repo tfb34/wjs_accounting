@@ -1,15 +1,67 @@
 <%provide(:title, "forms")%>
 
-<div class="row" id="forms">
-    <div class="column-offset-1 column-10">
-        <h3>Downloaded Forms</h3>
-        <ul>
-        	<li><a href="https://www.irs.gov/pub/irs-pdf/fw7.pdf" target="_blank">Form -W7</a></li>
-        	<li><a href="https://www.irs.gov/pub/irs-pdf/fw4.pdf?portlet=3" target="_blank">Form -W9</a></li>
-        	<li><a href="https://www.irs.gov/pub/irs-pdf/fw9.pdf?portlet=3" target="_blank">Form W-4</a></li>
-        	<li><a href="https://www.irs.gov/pub/irs-pdf/f2848.pdf" target="_blank">Power of Attorney Form</a></li>
-        	<li><a href="https://www.irs.gov/pub/irs-pdf/f9465.pdf" target="_blank">Installment Agreement Request</a></li>
-        	<li><a href="https://www.irs.gov/pub/irs-pdf/fss4.pdf?portlet=3" target="_blank">Application for EIN</a></li>
-        </ul>
+<div class="header-img" style="background: url('https://s3.us-east-2.amazonaws.com/wjs-accounting-project/images/payroll.jpeg') no-repeat center;background-size:cover">
+    <div class="overlay"></div>
+    <div class="page-info-tag"><span>Resources</span></div>
+</div>
+<div class="content-box">
+  <div class="row forms" >
+        <h2 class="subheader">IRS Forms</h2>
+        <div class="column-4" style="text-align: center;">
+            <div>
+                <a href="https://www.irs.gov/pub/irs-pdf/fw7.pdf" target="_blank"><img src="https://s3.us-east-2.amazonaws.com/wjs-accounting-project/images/w7-logo.png"></a>
+                <a href="https://www.irs.gov/pub/irs-pdf/fw7.pdf" target="_blank">Form W-7</a>
+                <p>The W-7 form is used to apply for an Individual Taxpayer Identification Number(ITIN).</p>
+            </div>
+        </div>
+        <div class="column-4" style="text-align: center;">
+            <div id="middle">
+                <a href="https://www.irs.gov/pub/irs-pdf/fw4.pdf?portlet=3" target="_blank"><img src="https://s3.us-east-2.amazonaws.com/wjs-accounting-project/images/w9-logo.png"></a>
+                <a href="https://www.irs.gov/pub/irs-pdf/fw4.pdf?portlet=3" target="_blank">Form W-9</a>
+                <p>Use this form to obtain your Taxpayer Identification Number(TIN).</p>
+            </div>
+        </div>
+        <div class="column-4" style="text-align: center;">
+            <a href="https://www.irs.gov/pub/irs-pdf/fw9.pdf?portlet=3" target="_blank"><img src="https://s3.us-east-2.amazonaws.com/wjs-accounting-project/images/w4-logo.png"></a>
+            <a href="https://www.irs.gov/pub/irs-pdf/fw9.pdf?portlet=3" target="_blank">Form W-4</a>
+            <p>Complete this form so that your employer can withhold the correct federal income tax from your pay.</p>
+        </div>
+    </div>
+    <div class="row forms" id="form-bottom-row">
+        <div class="column-4" style="text-align: center;">
+            <div>
+                <a href="https://www.irs.gov/pub/irs-pdf/fss4.pdf?portlet=3" target="_blank"><img src="https://s3.us-east-2.amazonaws.com/wjs-accounting-project/images/ss4-logo.png"></a>
+                <a href="https://www.irs.gov/pub/irs-pdf/fss4.pdf?portlet=3" target="_blank">Application for EIN</a>
+                <p>Use Form SS-4 to apply for an employer identification number(EIN).</p>
+            </div>
+        </div>
+        <div class="column-4" style="text-align: center;">
+            <div id="middle">
+                <a href="https://www.irs.gov/pub/irs-pdf/f9465.pdf" target="_blank"><img src="https://s3.us-east-2.amazonaws.com/wjs-accounting-project/images/9465-logo.png"></a>
+                <a href="https://www.irs.gov/pub/irs-pdf/f9465.pdf" target="_blank">Installment Agreement Request</a>
+                <p>Use this form to request a monthly installment plan if you cannot pay the full amount you owe shown on your tax return.</p>
+            </div>
+        </div>
+        <div class="column-4" style="text-align: center;">
+            <a href="https://www.irs.gov/pub/irs-pdf/f2848.pdf" target="_blank"><img src="https://s3.us-east-2.amazonaws.com/wjs-accounting-project/images/2484-logo.png"></a>
+            <a href="https://www.irs.gov/pub/irs-pdf/f2848.pdf" target="_blank">Power of Attorney Form</a>
+            <p>Use this form to authorize an indiviudal to represent you before the IRS.</p>
+        </div>
+    </div>
+
+    <!--calculator-->
+    <h2 class="subheader">Mortgage Calculator</h2>
+    <div class="calculator">
+        
+        <p>Mortgage Amount</p>
+        <input type="text" id="mortgage-amount" >
+        <p>Interest Rate(%)</p>
+        <input type="text" id="interest-rate" placeholder="(E.g.   3.92)">
+        <p>Mortgage Period(in years)</p>
+        <input type="text" id="mortgage-period"><br>
+        <button id="enter" onclick="enterMortgageInfo()">Enter</button>
+        <button id="reset" onclick="resetCalculator()">Reset</button><br><br>
+        <p>Total Cost of Mortgage: <span id="total-mortgage"></span></p>
+        <p>Monthly Payment: <span id="monthly-payment"></span></p>
     </div>
 </div>

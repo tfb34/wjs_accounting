@@ -15,25 +15,24 @@
 //= require_tree .
 let initialNavColor;
 
+
 document.addEventListener("turbolinks:load", function() {
     let title = document.getElementsByTagName("title")[0].innerHTML;
     let currentPage;
+    document.getElementsByTagName('body')[0].style.backgroundColor = "#E8E8E3";
     if(title.includes("home")){
         currentPage = "nav-home"
+        setWhiteBackground();
     }else if(title.includes("about")){
         currentPage = "nav-about"
-        document.getElementsByTagName('body')[0].style.backgroundColor = "#E8E8E3";
     }else if(title.includes("contact")){
         currentPage = "nav-contact"
-        document.getElementsByTagName('body')[0].style.backgroundColor = "#E8E8E3";
     }else if(title.includes("forms")){
         currentPage = "nav-forms"
     }else if(title.includes("payroll")){
         currentPage = "nav-payroll";
-        document.getElementsByTagName('body')[0].style.backgroundColor = "#E8E8E3";
     }else if(title.includes("services")){
         currentPage = "nav-services";
-        document.getElementsByTagName('body')[0].style.backgroundColor = "#E8E8E3";
     }
 
     if(title.includes("home")){
@@ -44,6 +43,10 @@ document.addEventListener("turbolinks:load", function() {
     document.getElementsByTagName('nav')[0].style.backgroundColor = initialNavColor;
     document.getElementById(currentPage).className = "selected";
 })
+
+function setWhiteBackground(){
+    document.getElementsByTagName('body')[0].style.backgroundColor = "white";
+}
 
 let timer = null;
 
@@ -101,14 +104,88 @@ function toggle(){
 
 function openNav(){
     document.getElementById("mobile-menu").style.width = "250px";
-
-
 }
 
 function closeNav(){
     document.getElementById("mobile-menu").style.width = "0";
 }
 
+function calcMortgagePayment(p,i,y){
+    let r = (i/1200);
+    let n = y*12;
+    let x = Math.pow(1+r,n);
+    let m = p*(r*x/(x-1));
+    return formatNum(Math.round(m));
+}
+
+function calcTotalMortgage(p,i,y){
+    let r = (i/1200);
+    let n = y*12;
+    let x = Math.pow(1+r,n);
+    let m = p*(r*x/(x-1));
+    return formatNum(Math.round(m*n));
+}
+function validateInput(){
+    let mA = document.getElementById("mortgage-amount");
+    let iR = document.getElementById("interest-rate");
+    let mP = document.getElementById("mortgage-period");
+    let p = parseFloat(mA.value);
+    let i = parseFloat(iR.value);
+    let y = parseInt(mP.value);
+    if(p>0 && i>=0 && y>0){
+        removeErrorClass(mA,iR,mP);
+        return true;
+    }else{
+        if(p<=0 || !p){
+            mA.className = "error";
+        }else{
+            mA.className = "";
+        }
+        if(i<0 || !i){
+            iR.className = "error";
+        }else{
+            iR.className = "";
+        }
+        if(y<=0 || !y){
+            mP.className = "error";
+        }else{
+            mP.className = "";
+        }
+        return false;
+    }
+}
+
+function removeErrorClass(mA,iR,mP){
+    if(mA.classList.contains("error")){
+        mA.className = "";
+    }
+    if(iR.classList.contains("error")){
+        iR.className = "";
+    }
+    if(mP.classList.contains("error")){
+        mP.className = "";
+    }
+}
+
+function enterMortgageInfo(){
+    if(validateInput()){
+        let p = document.getElementById("mortgage-amount").value;
+        let i = document.getElementById("interest-rate").value;
+        let y = document.getElementById("mortgage-period").value;
+        document.getElementById("monthly-payment").innerHTML=calcMortgagePayment(p,i,y);
+        document.getElementById("total-mortgage").innerHTML = calcTotalMortgage(p,i,y);
+    }
+}
+
+function resetCalculator(){
+    document.getElementById("mortgage-amount").value="";
+    document.getElementById("interest-rate").value="";
+    document.getElementById("mortgage-period").value="";
+}
+
+function formatNum(x){
+    return "$ "+x.toString().replace(/\B(?=(\d{3})+(?!\d))/g,",");
+}
 
 
 
