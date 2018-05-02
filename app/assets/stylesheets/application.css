@@ -362,6 +362,9 @@ nav:after {
 	
 	/*color: grey;*/
 }
+#home-header{
+    color:var(--header-color);font-size: 22px;margin-top:2.5em;margin-bottom:0.5em;font-weight:500;
+}
 .inner-wrapper p{
 	/*line-height:3em;*/
 	line-height: 2em;
@@ -994,6 +997,9 @@ article{
     }
     .payroll-icons p{
         padding:0 1em;
+    }
+    #home-header{
+        font-size:25px;
     }
    
 }
