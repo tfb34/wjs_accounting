@@ -277,12 +277,12 @@ nav:after {
 	font-size:18px;
 }
 .service-header, .service-description{
-	color: #717171;
+	color: var(--header-color);
 	text-align: center;
 }
 #services{
 	background-color: #ECECEC;
-	padding: 8em 2em 5em 2em;/*5 2 0 2*/
+	padding: 5em 2em 0em 2em;/*5 2 0 2*/
 }
 #read-more-btn{
 	background-color: var(--main-color);
@@ -300,7 +300,7 @@ nav:after {
 }
 #contact-info{
 	text-align: center;
-	padding: 10em 1em;
+	padding: 6em 1em;
 }
 #contact-info p{
 	line-height: 1.8em;
@@ -331,7 +331,7 @@ nav:after {
 	font-family: sans-serif;
 }
 .communication-row-wrapper{
-	margin-top: 10em;margin-bottom: 10em;/*font-size:14px;sdesktop: margin-top,margin-bottom: 3em*/
+	margin-top: 5em;margin-bottom: 5em;/*font-size:14px;sdesktop: margin-top,margin-bottom: 3em*/
 }
 .communication-row-wrapper p{
 	font-size:17px;
@@ -1096,7 +1096,7 @@ article{
 	}
 	footer{
 		background-color:black;
-		padding-top:12em;padding-bottom:8em;
+		padding-top:7em;padding-bottom:8em;
 	}
 	footer a{
 		color: var(--main-color);
