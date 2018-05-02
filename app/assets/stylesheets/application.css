@@ -466,7 +466,7 @@ footer{
 	vertical-align: middle;
 }
 .content-box{
-	padding:5em 2em;
+	padding:3em 2em;
 	z-index:0;/*-2*/
 	line-height: 1.8em;
 	/*color:#333;*/
@@ -481,7 +481,7 @@ footer{
 }
 .content-box.about{
     /*padding:1em 1.5em 8em 1.5em;*/
-    padding:5em 2em 10em 2em;
+    padding:3em 2em 10em 2em;
 }
 #mobile-menu{
     width: 0;
@@ -647,9 +647,15 @@ footer{
     cursor: pointer;
     letter-spacing: 1.5px;
 }
+#home-main-image div span:hover{
+    background-color:rgba(1,2,3,0.7);
+}
 span#contact-btn{
     background-color:teal !important;
     /*border:1px solid teal !important;*/
+}
+span#contact-btn:hover{
+    background-color:#005959 !important;
 }
 #home-main-image div span a{
     color:white;
@@ -791,7 +797,7 @@ form h3{
     color:teal;
 }
 .forms{
-    padding-top:3em;
+    /*padding-top:3em;*/
     z-index:1;
 }
 #form-bottom-row{
@@ -831,7 +837,7 @@ form h3{
 }
 .subheader{
     /*color:#717171*/;letter-spacing: 2px;text-align: center;margin-bottom: 2em;
-    font-size:x-large;font-weight:500;
+    font-weight:500;font-size:1.5em;
 }
 article{
     margin-bottom:4em;
@@ -989,9 +995,7 @@ article{
     .payroll-icons p{
         padding:0 1em;
     }
-    .subheader{
-        font-size:30px;
-    }
+   
 }
 
 /*larger screens (e.g. desktop)*/
@@ -1184,8 +1188,5 @@ article{
         padding:0 2.5em;
         line-height:1.5em;
         font-size:15px;
-    }
-    .subheader{
-        font-size:40px;
-    }   
+    }  
 }
